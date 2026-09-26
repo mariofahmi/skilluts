@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skill Soal UTS UNIROW FKIP — Generator Ujian Resmi OBE 2026</title>
-  <meta name="description" content="AI Agentic Skill resmi Google Antigravity untuk menyusun naskah Soal Ujian Tengah Semester (UTS) ber-KOP resmi dan logo UNIROW FKIP berbasis kurikulum OBE 2026.">
-  <meta name="keywords" content="Soal UTS, UNIROW Tuban, FKIP, Kurikulum OBE, Antigravity Skill, Ujian Tengah Semester, DOCX Generator">
+  <title>Portal Resmi Soal UTS UNIROW FKIP — Kurikulum OBE 2026</title>
+  <meta name="description" content="AI Agentic Portal resmi Universitas PGRI Ronggolawe Tuban (FKIP) untuk preview, simulasi, dan cetak naskah Soal Ujian Tengah Semester (UTS) berbasis kurikulum OBE 2026.">
+  <meta name="keywords" content="Soal UTS, UNIROW Tuban, FKIP, Kurikulum OBE, Portal Ujian, Cetak Soal UTS, Taksonomi Bloom">
   <meta name="author" content="Mario Fahmi - UNIROW Tuban">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Skill Soal UTS UNIROW FKIP — OBE 2026">
-  <meta property="og:description" content="Otomasi penyusunan naskah Soal UTS resmi ber-KOP dan logo UNIROW FKIP dengan Taksonomi Bloom.">
+  <meta property="og:title" content="Portal Soal UTS UNIROW FKIP — OBE 2026">
+  <meta property="og:description" content="Katalog 61 Mata Kuliah & Generator Naskah Soal UTS Resmi UNIROW FKIP dengan Taksonomi Bloom.">
   <meta property="og:url" content="https://mariofahmi.github.io/skilluts/">
   <meta property="og:type" content="website">
 
@@ -22,7 +22,7 @@
   <style>
     :root {
       --bg: #07090e;
-      --bg-surface: rgba(15, 23, 42, 0.65);
+      --bg-surface: rgba(15, 23, 42, 0.7);
       --bg-card: rgba(255, 255, 255, 0.03);
       --bg-card-hover: rgba(255, 255, 255, 0.06);
       --border: rgba(255, 255, 255, 0.08);
@@ -49,9 +49,10 @@
 
     /* Ambient Glow Background */
     .ambient-bg { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
-    .ambient-sphere { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.4; animation: float 22s ease-in-out infinite alternate; }
+    .ambient-sphere { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.38; animation: float 22s ease-in-out infinite alternate; }
     .sphere-1 { width: 600px; height: 600px; background: radial-gradient(circle, #991b1b 0%, rgba(153, 27, 27, 0) 70%); top: -150px; left: -100px; }
     .sphere-2 { width: 500px; height: 500px; background: radial-gradient(circle, #1e3a8a 0%, rgba(30, 58, 138, 0) 70%); top: 30%; right: -150px; animation-delay: -8s; }
+    .sphere-3 { width: 700px; height: 700px; background: radial-gradient(circle, #431407 0%, rgba(67, 20, 7, 0) 70%); bottom: -200px; left: 20%; animation-delay: -14s; }
     .grid-overlay {
       position: absolute; inset: 0;
       background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
@@ -66,26 +67,26 @@
       100% { transform: translate(-30px, 50px) scale(0.95); }
     }
 
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
 
     /* Navbar */
     nav {
       position: sticky; top: 0; z-index: 100;
       backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-      background: rgba(7, 9, 14, 0.75); border-bottom: 1px solid var(--border);
+      background: rgba(7, 9, 14, 0.8); border-bottom: 1px solid var(--border);
     }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 74px; }
     .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); font-weight: 700; font-size: 1.15rem; }
     .brand-icon {
-      width: 38px; height: 38px;
-      background: linear-gradient(135deg, var(--primary), #b91c1c);
+      width: 40px; height: 40px;
+      background: linear-gradient(135deg, var(--primary), #991b1b);
       border-radius: 10px; display: flex; align-items: center; justify-content: center;
       box-shadow: 0 0 20px var(--primary-glow);
     }
     .brand-icon svg { width: 22px; height: 22px; fill: none; stroke: white; stroke-width: 2.2; }
     .brand-tag { font-size: 0.72rem; background: rgba(239, 68, 68, 0.15); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.3); padding: 3px 8px; border-radius: 20px; font-weight: 600; margin-left: 4px; }
 
-    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
     .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--text); }
 
@@ -99,9 +100,11 @@
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(239, 68, 68, 0.45); }
     .btn-secondary { background: var(--bg-card); color: var(--text); border: 1px solid var(--border); backdrop-filter: blur(12px); }
     .btn-secondary:hover { background: var(--bg-card-hover); border-color: rgba(255, 255, 255, 0.2); transform: translateY(-2px); }
+    .btn-emerald { background: linear-gradient(135deg, #10b981, #059669); color: white; box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3); }
+    .btn-emerald:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(16, 185, 129, 0.45); }
 
     /* Hero */
-    .hero { padding: 90px 0 60px; text-align: center; }
+    .hero { padding: 80px 0 50px; text-align: center; }
     .badge-pill {
       display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 30px;
       background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.28); color: #fecaca;
@@ -110,8 +113,8 @@
     .badge-pill-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 10px var(--primary); }
 
     .hero-title {
-      font-size: clamp(2.4rem, 5.5vw, 4.2rem); font-weight: 800; line-height: 1.15;
-      letter-spacing: -0.03em; margin-bottom: 22px;
+      font-size: clamp(2.3rem, 5vw, 4rem); font-weight: 800; line-height: 1.18;
+      letter-spacing: -0.03em; margin-bottom: 20px;
       background: linear-gradient(180deg, #ffffff 30%, #94a3b8 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
@@ -119,55 +122,96 @@
       background: linear-gradient(135deg, #f87171 0%, #fb923c 50%, #38bdf8 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
-    .hero-desc { font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--text-muted); max-width: 780px; margin: 0 auto 36px; font-weight: 400; }
-    .hero-cta { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+    .hero-desc { font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--text-muted); max-width: 820px; margin: 0 auto 36px; font-weight: 400; }
+    .hero-cta { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 44px; }
 
-    .hero-stats { display: flex; justify-content: center; gap: 48px; margin-top: 20px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .hero-stats { display: flex; justify-content: center; gap: 48px; margin-top: 20px; padding-top: 32px; border-top: 1px solid var(--border); flex-wrap: wrap; }
     .stat-item { text-align: center; }
-    .stat-num { font-size: 2rem; font-weight: 800; color: var(--text); font-family: var(--font-mono); }
+    .stat-num { font-size: 2.1rem; font-weight: 800; color: var(--text); font-family: var(--font-mono); }
     .stat-label { font-size: 0.82rem; color: var(--text-sub); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
 
-    /* Interactive Simulator */
-    .section { padding: 80px 0; }
-    .section-header { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+    /* Interactive Section */
+    .section { padding: 70px 0; }
+    .section-header { text-align: center; max-width: 720px; margin: 0 auto 50px; }
     .section-tag { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; color: #f87171; font-weight: 700; margin-bottom: 12px; display: inline-block; }
-    .section-title { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .section-title { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 14px; }
     .section-desc { font-size: 1.05rem; color: var(--text-muted); }
 
+    /* Dual Panel Exam Simulator */
     .simulator-card {
       background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 36px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); backdrop-filter: blur(16px);
+      padding: 32px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); backdrop-filter: blur(16px);
     }
-    .sim-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: start; }
-    @media (max-width: 960px) { .sim-grid { grid-template-columns: 1fr; } }
+    .sim-grid { display: grid; grid-template-columns: 1fr 1.35fr; gap: 36px; align-items: start; }
+    @media (max-width: 1024px) { .sim-grid { grid-template-columns: 1fr; } }
 
-    .form-group { margin-bottom: 18px; }
-    .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 8px; }
-    .form-input {
-      width: 100%; padding: 10px 14px; background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--border); border-radius: 8px; color: #fff; font-family: inherit; font-size: 0.95rem;
+    /* Control Panel */
+    .controls-panel {
+      background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border);
+      border-radius: 12px; padding: 24px;
+    }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
+    .form-input, .form-select {
+      width: 100%; padding: 10px 14px; background: rgba(10, 14, 28, 0.8);
+      border: 1px solid var(--border); border-radius: 8px; color: #fff; font-family: inherit; font-size: 0.92rem;
       outline: none; transition: border-color 0.2s;
     }
-    .form-input:focus { border-color: var(--primary); }
+    .form-input:focus, .form-select:focus { border-color: var(--primary); }
 
-    /* Exam Paper Preview */
-    .exam-paper {
-      background: #ffffff; color: #111827; border-radius: 8px; padding: 40px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); font-family: 'Times New Roman', serif;
-      line-height: 1.5; font-size: 0.95rem;
+    /* Course Selector Pills */
+    .sem-filter-row { display: flex; gap: 6px; margin-bottom: 14px; overflow-x: auto; padding-bottom: 6px; }
+    .sem-chip {
+      padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 700;
+      background: rgba(255, 255, 255, 0.05); color: var(--text-muted); border: 1px solid var(--border);
+      cursor: pointer; white-space: nowrap; transition: all 0.2s;
     }
-    .exam-kop { text-align: center; border-bottom: 2px solid #111827; padding-bottom: 12px; margin-bottom: 16px; position: relative; }
-    .exam-kop-title { font-size: 1.15rem; font-weight: bold; text-transform: uppercase; }
-    .exam-kop-sub { font-size: 0.95rem; font-weight: bold; }
-    .exam-kop-uni { font-size: 1.15rem; font-weight: bold; }
-    .exam-kop-addr { font-size: 0.78rem; color: #374151; }
+    .sem-chip:hover, .sem-chip.active { background: var(--primary); color: white; border-color: var(--primary); box-shadow: 0 0 10px var(--primary-glow); }
 
-    .exam-meta-table { width: 100%; border-collapse: collapse; margin-bottom: 18px; font-size: 0.88rem; }
-    .exam-meta-table td { padding: 4px 8px; border: 1px solid #d1d5db; }
-    .exam-meta-table .tbl-header { background: #f3f4f6; font-weight: bold; text-align: center; }
+    /* Action Buttons in Simulator */
+    .sim-actions { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
 
-    .exam-instr { font-size: 0.85rem; font-style: italic; margin-bottom: 16px; }
-    .exam-question-item { margin-bottom: 12px; padding-left: 24px; text-indent: -24px; text-align: justify; }
+    /* Authentic A4 Exam Sheet Preview */
+    .paper-wrapper {
+      background: #e2e8f0; padding: 24px; border-radius: 12px; box-shadow: inset 0 2px 10px rgba(0,0,0,0.3);
+      display: flex; justify-content: center;
+    }
+    .exam-paper {
+      background: #ffffff; color: #111827; width: 100%; max-width: 680px; min-height: 800px;
+      padding: 36px 40px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25); border-radius: 4px;
+      font-family: 'Times New Roman', serif; line-height: 1.5; font-size: 0.95rem; position: relative;
+    }
+
+    /* KOP Header */
+    .exam-kop {
+      display: flex; align-items: center; justify-content: center; gap: 16px;
+      border-bottom: 2px solid #000000; padding-bottom: 12px; margin-bottom: 14px; text-align: center;
+    }
+    .kop-logo { width: 68px; height: 68px; flex-shrink: 0; }
+    .kop-text-block { flex-grow: 1; text-align: center; }
+    .kop-title { font-size: 1.15rem; font-weight: bold; letter-spacing: 0.02em; }
+    .kop-sub { font-size: 0.95rem; font-weight: bold; }
+    .kop-uni { font-size: 1.15rem; font-weight: bold; }
+    .kop-addr { font-size: 0.76rem; color: #374151; margin-top: 2px; }
+
+    /* Table Identitas */
+    .exam-meta-table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 0.88rem; }
+    .exam-meta-table td { padding: 4px 8px; border: 1px solid #111827; }
+    .tbl-header { background: #f3f4f6; font-weight: bold; text-align: center; font-size: 0.92rem; }
+
+    .exam-instr { font-size: 0.88rem; font-style: italic; margin-bottom: 16px; }
+    .exam-q-item { margin-bottom: 12px; padding-left: 28px; text-indent: -28px; text-align: justify; }
+
+    /* Course Catalog Grid */
+    .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 24px; }
+    .course-card {
+      background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); border-radius: 12px;
+      padding: 18px; transition: all 0.25s ease; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .course-card:hover { transform: translateY(-3px); border-color: rgba(239, 68, 68, 0.4); background: rgba(255, 255, 255, 0.05); }
+    .course-card-sem { font-size: 0.72rem; color: #f87171; font-weight: 700; text-transform: uppercase; margin-bottom: 6px; }
+    .course-card-title { font-size: 1rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .course-card-dosen { font-size: 0.82rem; color: var(--text-muted); }
 
     /* Bento Grid */
     .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -211,6 +255,16 @@
     }
     #toast.show { opacity: 1; transform: translateY(0); }
 
+    /* Print Styles (Only print the authentic exam sheet) */
+    @media print {
+      body * { visibility: hidden; }
+      #printableExam, #printableExam * { visibility: visible; }
+      #printableExam {
+        position: absolute; left: 0; top: 0; width: 100%; margin: 0; padding: 20mm;
+        box-shadow: none; border-radius: 0;
+      }
+    }
+
     /* Footer */
     footer { border-top: 1px solid var(--border); padding: 60px 0 40px; background: rgba(5, 7, 12, 0.9); margin-top: 80px; }
     .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
@@ -222,6 +276,7 @@
   <div class="ambient-bg">
     <div class="ambient-sphere sphere-1"></div>
     <div class="ambient-sphere sphere-2"></div>
+    <div class="ambient-sphere sphere-3"></div>
     <div class="grid-overlay"></div>
   </div>
 
@@ -232,13 +287,14 @@
         <div class="brand-icon">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         </div>
-        <span>Skill Soal UTS</span>
+        <span>Portal Soal UTS</span>
         <span class="brand-tag">UNIROW FKIP</span>
       </a>
 
       <ul class="nav-links">
-        <li><a href="#fitur">Fitur Unggulan</a></li>
         <li><a href="#simulator">Live Generator</a></li>
+        <li><a href="#katalog">Katalog 61 MK</a></li>
+        <li><a href="#fitur">Arsitektur</a></li>
         <li><a href="#instalasi">Instalasi IDE</a></li>
       </ul>
 
@@ -247,7 +303,7 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           <span>GitHub</span>
         </a>
-        <a href="#simulator" class="btn btn-primary">Coba Live Preview</a>
+        <a href="#simulator" class="btn btn-primary">Pratinjau Ujian</a>
       </div>
     </div>
   </nav>
@@ -267,25 +323,25 @@
 
       <p class="hero-desc">
         Hasilkan naskah Soal Ujian Tengah Semester (DOCX Siap Cetak & Markdown) ber-KOP resmi, logo ber-anchor, 
-        serta butir soal esai dan pilihan ganda berbasis Taksonomi Bloom yang disarikan langsung dari RPS kurikulum OBE.
+        serta butir soal esai berkualitas tinggi berbasis Taksonomi Bloom (C2–C6) yang disarikan langsung dari RPS kurikulum OBE.
       </p>
 
       <div class="hero-cta">
         <a href="#simulator" class="btn btn-primary" style="padding: 14px 28px; font-size: 1rem;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-          <span>Simulasi Naskah Ujian</span>
+          <span>Buka Generator Interaktif</span>
         </a>
         <button class="btn btn-secondary" onclick="copyInstallCmd()" style="padding: 14px 24px; font-size: 1rem;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-          <span>Salin Command /uts</span>
+          <span>Salin Command /uts-unirow</span>
         </button>
       </div>
 
       <div class="hero-stats">
-        <div class="stat-item"><div class="stat-num">FKIP</div><div class="stat-label">Template Resmi</div></div>
+        <div class="stat-item"><div class="stat-num">61 MK</div><div class="stat-label">Terintegrasi Penuh</div></div>
+        <div class="stat-item"><div class="stat-num">FKIP</div><div class="stat-label">KOP & Logo Resmi</div></div>
         <div class="stat-item"><div class="stat-num">C2–C6</div><div class="stat-label">Taksonomi Bloom</div></div>
-        <div class="stat-item"><div class="stat-num">Pure Py</div><div class="stat-label">Zero Dependencies</div></div>
-        <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Preservasi XML & Logo</div></div>
+        <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Preservasi XML DOCX</div></div>
       </div>
     </div>
   </header>
@@ -294,106 +350,161 @@
   <section id="simulator" class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Simulator Interaktif</span>
-        <h2 class="section-title">Pratinjau Lembar Soal Ujian</h2>
-        <p class="section-desc">Ubah data mata kuliah di panel kiri, dan lihat pembaruan lembar naskah Soal UTS secara langsung pada panel kanan.</p>
+        <span class="section-tag">Simulator & Editor Naskah</span>
+        <h2 class="section-title">Pratinjau Lembar Soal Ujian (WYSIWYG)</h2>
+        <p class="section-desc">Pilih salah satu dari 61 mata kuliah di bawah untuk memuat soal asli RPS, atau sesuaikan parameter secara manual.</p>
       </div>
 
       <div class="simulator-card">
         <div class="sim-grid">
           <!-- Control Panel -->
-          <div>
-            <h3 style="font-size: 1.15rem; margin-bottom: 20px; color: #fff;">Parameter Ujian:</h3>
+          <div class="controls-panel">
+            <h3 style="font-size: 1.15rem; margin-bottom: 16px; color: #fff; display: flex; align-items: center; gap: 8px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              Pengaturan Mata Kuliah
+            </h3>
+
+            <!-- Quick Course Picker -->
+            <div class="form-group">
+              <label>Pilih Cepat dari 61 Mata Kuliah:</label>
+              <select id="courseSelect" class="form-select" onchange="onSelectCourse(this.value)">
+                <!-- Generated by JS -->
+              </select>
+            </div>
+
             <div class="form-group">
               <label>Nama Mata Kuliah</label>
-              <input type="text" id="inpMK" class="form-input" value="Telaah Kurikulum PPKn" oninput="updateExamPreview()">
+              <input type="text" id="inpMK" class="form-input" oninput="updateExamPreview()">
             </div>
+
             <div class="form-group">
               <label>Dosen Pengampu / Pengembang RPS</label>
-              <input type="text" id="inpDosen" class="form-input" value="Dr. Sukisno, M.Pd." oninput="updateExamPreview()">
+              <input type="text" id="inpDosen" class="form-input" oninput="updateExamPreview()">
             </div>
+
             <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
               <div>
                 <label>Angkatan / Semester</label>
-                <input type="text" id="inpSem" class="form-input" value="2023/6" oninput="updateExamPreview()">
+                <input type="text" id="inpSem" class="form-input" oninput="updateExamPreview()">
               </div>
               <div>
                 <label>Waktu Pengerjaan</label>
-                <input type="text" id="inpWaktu" class="form-input" value="90 menit" oninput="updateExamPreview()">
-              </div>
-            </div>
-            <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-              <div>
-                <label>Hari Pelaksanaan</label>
-                <input type="text" id="inpHari" class="form-input" value="Senin" oninput="updateExamPreview()">
-              </div>
-              <div>
-                <label>Sifat Ujian</label>
-                <input type="text" id="inpSifat" class="form-input" value="Tutup Buku" oninput="updateExamPreview()">
+                <input type="text" id="inpWaktu" class="form-input" oninput="updateExamPreview()">
               </div>
             </div>
 
-            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border);">
-              <h4 style="font-size: 0.95rem; margin-bottom: 12px; color: var(--text-muted);">Pilihan Soal Contoh:</h4>
-              <button class="btn btn-secondary" onclick="setPreset('hukum')" style="width: 100%; margin-bottom: 8px; justify-content: flex-start; font-size: 0.85rem;">
-                ⚖️ Mata Kuliah Bidang Hukum (HTN / HAN)
+            <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <div>
+                <label>Hari Pelaksanaan</label>
+                <input type="text" id="inpHari" class="form-input" value="Sesuai Jadwal" oninput="updateExamPreview()">
+              </div>
+              <div>
+                <label>Sifat Ujian</label>
+                <input type="text" id="inpSifat" class="form-input" oninput="updateExamPreview()">
+              </div>
+            </div>
+
+            <div class="sim-actions">
+              <button class="btn btn-emerald" onclick="window.print()" style="flex: 1;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                <span>Cetak / PDF</span>
               </button>
-              <button class="btn btn-secondary" onclick="setPreset('pendidikan')" style="width: 100%; justify-content: flex-start; font-size: 0.85rem;">
-                📚 Mata Kuliah Bidang Kependidikan (Kurikulum / PLP)
+              <button class="btn btn-secondary" onclick="copyMarkdownFormat()" style="flex: 1;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Salin Markdown</span>
               </button>
             </div>
           </div>
 
           <!-- Document Render Output -->
-          <div class="exam-paper" id="paperArea">
-            <div class="exam-kop">
-              <div class="exam-kop-title">UJIAN TENGAH SEMESTER</div>
-              <div class="exam-kop-sub">TAHUN AKADEMIK 2025/2026</div>
-              <div class="exam-kop-uni">UNIVERSITAS PGRI RONGGOLAWE TUBAN</div>
-              <div class="exam-kop-addr">Jl. Manunggal 61 Tuban, Telp. (0356) 322233, Fax (0356) 331578 | www.unirow.ac.id</div>
-            </div>
+          <div class="paper-wrapper">
+            <div class="exam-paper" id="printableExam">
+              <!-- Official Kop -->
+              <div class="exam-kop">
+                <svg class="kop-logo" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="46" fill="#1e3a8a" stroke="#fbbf24" stroke-width="3"/>
+                  <circle cx="50" cy="50" r="38" fill="#b91c1c"/>
+                  <path d="M50 20 L58 40 L80 40 L62 54 L69 76 L50 62 L31 76 L38 54 L20 40 L42 40 Z" fill="#fbbf24"/>
+                  <circle cx="50" cy="50" r="10" fill="#ffffff"/>
+                </svg>
+                <div class="kop-text-block">
+                  <div class="kop-title">UJIAN TENGAH SEMESTER</div>
+                  <div class="kop-sub">TAHUN AKADEMIK 2025/2026</div>
+                  <div class="kop-uni">UNIVERSITAS PGRI RONGGOLAWE TUBAN</div>
+                  <div class="kop-addr">Jl. Manunggal 61 Tuban, Telp. (0356) 322233, Fax (0356) 331578 | www.unirow.ac.id</div>
+                </div>
+              </div>
 
-            <table class="exam-meta-table">
-              <tr>
-                <td colspan="4" class="tbl-header">FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN</td>
-              </tr>
-              <tr>
-                <td style="width: 20%; font-weight: bold;">Prodi</td>
-                <td style="width: 40%;">Pendidikan Pancasila dan Kewarganegaraan</td>
-                <td style="width: 15%; font-weight: bold;">Dosen</td>
-                <td style="width: 25%;" id="prevDosen">Dr. Sukisno, M.Pd.</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold;">Mata kuliah</td>
-                <td id="prevMK">Telaah Kurikulum PPKn</td>
-                <td style="font-weight: bold;">Waktu</td>
-                <td id="prevWaktu">90 menit</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold;">Angkt/Semester</td>
-                <td id="prevSem">2023/6</td>
-                <td style="font-weight: bold;">Hari</td>
-                <td id="prevHari">Senin</td>
-              </tr>
-              <tr>
-                <td style="font-weight: bold;">Sifat</td>
-                <td id="prevSifat">Tutup Buku</td>
-                <td style="font-weight: bold;">Tanggal</td>
-                <td>Sesuai Jadwal</td>
-              </tr>
-            </table>
+              <!-- Identity Table -->
+              <table class="exam-meta-table">
+                <tr>
+                  <td colspan="4" class="tbl-header">FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN</td>
+                </tr>
+                <tr>
+                  <td style="width: 20%; font-weight: bold;">Prodi</td>
+                  <td style="width: 40%;">Pendidikan Pancasila dan Kewarganegaraan</td>
+                  <td style="width: 15%; font-weight: bold;">Dosen</td>
+                  <td style="width: 25%;" id="prevDosen">-</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">Mata kuliah</td>
+                  <td id="prevMK" style="font-weight: bold;">-</td>
+                  <td style="font-weight: bold;">Waktu</td>
+                  <td id="prevWaktu">90 menit</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">Angkt/Semester</td>
+                  <td id="prevSem">-</td>
+                  <td style="font-weight: bold;">Hari</td>
+                  <td id="prevHari">Sesuai Jadwal</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;">Sifat</td>
+                  <td id="prevSifat">Tutup Buku</td>
+                  <td style="font-weight: bold;">Tanggal</td>
+                  <td>Sesuai Jadwal UTS</td>
+                </tr>
+              </table>
 
-            <div class="exam-instr">Jawablah pertanyaan dibawah ini dengan benar:</div>
+              <div class="exam-instr">Jawablah pertanyaan dibawah ini dengan benar:</div>
 
-            <div id="questionsContainer">
-              <!-- Rendered via JS -->
-            </div>
+              <div id="questionsContainer">
+                <!-- Injected via JS -->
+              </div>
 
-            <div style="text-align: center; font-weight: bold; margin-top: 24px; letter-spacing: 0.1em; text-transform: uppercase;">
-              SELAMAT MENGERJAKAN
+              <div style="text-align: center; font-weight: bold; margin-top: 32px; letter-spacing: 0.12em; text-transform: uppercase;">
+                SELAMAT MENGERJAKAN
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 61 Courses Catalog Section -->
+  <section id="katalog" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Arsip Bank Soal</span>
+        <h2 class="section-title">Katalog 61 Mata Kuliah PPKn (Semester 1–8)</h2>
+        <p class="section-desc">Pilih semester untuk melihat seluruh daftar naskah UTS yang telah disusun secara presisi sesuai RPS kurikulum OBE.</p>
+      </div>
+
+      <div class="sem-filter-row" id="semFilterNav">
+        <button class="sem-chip active" onclick="filterCatalog('ALL', this)">Semua Semester (61 MK)</button>
+        <button class="sem-chip" onclick="filterCatalog('1_SMT', this)">Semester 1 (8 MK)</button>
+        <button class="sem-chip" onclick="filterCatalog('2_SMT', this)">Semester 2 (9 MK)</button>
+        <button class="sem-chip" onclick="filterCatalog('3_SMT', this)">Semester 3 (9 MK)</button>
+        <button class="sem-chip" onclick="filterCatalog('4_SMT', this)">Semester 4 (11 MK)</button>
+        <button class="sem-chip" onclick="filterCatalog('5_SMT', this)">Semester 5 (11 MK)</button>
+        <button class="sem-chip" onclick="filterCatalog('6_SMT', this)">Semester 6 (10 MK)</button>
+        <button class="sem-chip" onclick="filterCatalog('7_SMT', this)">Semester 7 (2 MK)</button>
+        <button class="sem-chip" onclick="filterCatalog('8_SMT', this)">Semester 8 (1 MK)</button>
+      </div>
+
+      <div class="catalog-grid" id="catalogGrid">
+        <!-- Injected via JS -->
       </div>
     </div>
   </section>
@@ -411,7 +522,7 @@
         <div class="bento-card bento-span-2">
           <div>
             <div class="bento-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
             </div>
             <h3 class="bento-title">Preservasi Struktur Master Template Word XML</h3>
             <p class="bento-desc">
@@ -524,33 +635,44 @@
   </footer>
 
   <script>
-    const sampleQuestions = {
-      pendidikan: [
-        "Jelaskan secara komprehensif konsep dasar, hakikat, dan 4 dimensi kurikulum! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?",
-        "Kaji dan analisislah 4 landasan utama pengembangan kurikulum (Filosofis, Psikologis, Sosiokultural, dan IPTEK) dalam membentuk kerangka pembelajaran yang bermakna!",
-        "Lakukan telaah kritis terhadap anatomi komponen pokok kurikulum! Bandingkan keterkaitan antara tujuan, materi ajar, strategi pelaksanaan, dan evaluasi!",
-        "Dalam konteks transformasi pendidikan nasional, analisislah dinamika perbedaan pokok antara Kurikulum 2013 dengan Kurikulum Merdeka!",
-        "Rancanglah sebuah gagasan strategi pembelajaran berbasis studi kasus yang inovatif dan aplikatif untuk menginternalisasikan Profil Pelajar Pancasila di tingkat SMA!"
-      ],
-      hukum: [
-        "Jelaskan hakikat, ruang lingkup, dan asas-asas fundamental Hukum Tata Negara dalam konteks sistem ketatanegaraan Republik Indonesia pasca amandemen UUD 1945!",
-        "Analisislah prinsip pemisahan dan pembagian kekuasaan (Trias Politica) serta mekanisme checks and balances antara lembaga eksekutif, legislatif, dan yudikatif!",
-        "Lakukan kajian komparatif terhadap bentuk negara kesatuan dengan desentralisasi vs otonomi daerah di Indonesia! Jelaskan batas kewenangan pemerintah daerah!",
-        "Dalam dinamika hukum kontemporer, kaji problematika pengujian undang-undang (judicial review) di Mahkamah Konstitusi terkait perlindungan hak konstitusional warga negara!",
-        "Susunlah sebuah analisis solutif mengenai peran partisipasi publik bermakna (meaningful participation) dalam proses pembentukan peraturan perundang-undangan!"
-      ]
-    };
+    // Embedded 61 Course Database
+    const ALL_COURSES = [{"semester": "1_SMT", "sem_label": "1 (Semester 1)", "angkt_sem": "2025/1", "mk": "Ilmu Budaya Dasar", "dosen": "Dr. Usep Supriatna, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "01_2_Soal_UTS_Ilmu_Budaya_Dasar_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Ilmu Budaya Dasar, khususnya terkait Pengantar Ilmu Budaya Dasar! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Hakikat Manusia sebagai Makhluk Budaya! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Nilai-Nilai Budaya dan Sikap Individu! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Adat Istiadat dan Pelestarian Budaya. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Ilmu Budaya Dasar!", "Berdasarkan kajian materi mengenai Nilai Estetika dan Seni Budaya Lokal, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "1_SMT", "sem_label": "1 (Semester 1)", "angkt_sem": "2025/1", "mk": "Ilmu Kewarganegaraan", "dosen": "Dr. Mardi Widodo, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "01_3_Soal_UTS_Ilmu_Kewarganegaraan_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Ilmu Kewarganegaraan, khususnya terkait Pengantar IKN: Pengertian, Tujuan, Ruang Lingkup, Kedudukan, Paradigma IKN! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Karakteristik IKN; Hubungan dengan sosiologi, politik, hukum, sejarah, antropologi; Body of Knowledge PPKn! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Sejarah civics di AS; Inggris ; Jepang ; Singapura ; Perkembangan di Indonesia! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Citizenship vs nationality; Dimensi kewarganegaraan ; Isu dwi-kewarganegaraan; Stateless persons. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Ilmu Kewarganegaraan!", "Berdasarkan kajian materi mengenai Asas kewarganegaraan ; UU No. 12/2006; WNI dan WNA; Kasus-kasus kewarganegaraan, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "1_SMT", "sem_label": "1 (Semester 1)", "angkt_sem": "2025/1", "mk": "Pancasila", "dosen": "Tim Dosen Mata Kuliah Pancasila", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "01_4_Soal_UTS_Pancasila_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Pancasila, khususnya terkait Hakikat dan Fungsi Pancasila! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Sejarah Pancasila Era Pra-Kemerdekaan! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Perumusan dan Penetapan Pancasila! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Pancasila sebagai Ideologi Negara dan Dasar Negara. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Pancasila!", "Berdasarkan kajian materi mengenai Dinamika Nilai-Nilai Pancasila dalam Sejarah Indonesia, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "1_SMT", "sem_label": "1 (Semester 1)", "angkt_sem": "2025/1", "mk": "Pengantar Ilmu Politik", "dosen": "Dr. Usep Supriatna, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "01_5_Soal_UTS_Pengantar_Ilmu_Politik_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Pengantar Ilmu Politik, khususnya terkait Konsep Dasar Politik dan Ilmu Politik! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Sejarah dan Perkembangan Ilmu Politik! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Pendekatan-Pendekatan dalam Ilmu Politik! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Sistem Politik. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Pengantar Ilmu Politik!", "Berdasarkan kajian materi mengenai Budaya Politik, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "1_SMT", "sem_label": "1 (Semester 1)", "angkt_sem": "2025/1", "mk": "Pengantar Pendidikan", "dosen": "Dr. Sukisno, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "01_6_Soal_UTS_Pengantar_Pendidikan_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Pengantar Pendidikan, khususnya terkait Perkenalan; Kontrak perkuliahan; Pengertian pendidikan; Hakikat pendidikan; Ruang lingkup ilmu pendidikan! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Hakikat manusia sebagai homo educandum; Manusia sebagai subjek pendidikan; Kodrat dan kemampuan manusia untuk dididik! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Pendidikan sebagai sistem; Komponen-komponen sistem pendidikan; Pendidikan sebagai ilmu; Karakteristik ilmu pendidikan! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Landasan sosiologis pendidikan; Pendidikan dan masyarakat; Pendidikan multikultural; Bhinneka Tunggal Ika dalam pendidikan. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Pengantar Pendidikan!", "Berdasarkan kajian materi mengenai Sejarah pendidikan di Indonesia; Tokoh-tokoh pendidikan Indonesia ; Analisis masalah pendidikan, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "1_SMT", "sem_label": "1 (Semester 1)", "angkt_sem": "2025/1", "mk": "Perkembangan Peserta Didik", "dosen": "Dr. Djoko Apriono, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "01_7_Soal_UTS_Perkembangan_Peserta_Didik_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Perkembangan Peserta Didik, khususnya terkait 1. Konsep dasar perkembangan<br>2. Prinsip-prinsip perkembangan<br>3. Faktor-faktor yang mempengaruhi perkembangan<br>! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai 1. Tahapan perkembangan fisik<br>2. Perkembangan motorik<br>3. Implikasi dalam pembelajaran<br>! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai 1. Teori Piaget: Sensorimotor, Praoperasional, Konkret, Formal<br>2. Aplikasi dalam pembelajaran PPKn<br>! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait 1. 8 Tahapan psikososial Erikson<br>2. Krisis perkembangan<br>3. Implikasi bagi pendidikan<br>. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Perkembangan Peserta Didik!", "Berdasarkan kajian materi mengenai 1. Teori perkembangan moral Kohlberg<br>2. 6 Tahapan moral<br>3. Relevansi dengan pendidikan kewarganegaraan<br>, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "1_SMT", "sem_label": "1 (Semester 1)", "angkt_sem": "2025/1", "mk": "Pengantar Ilmu Hukum dan Pengantar Hukum Indonesia (PIH–PHI)", "dosen": "Tim Dosen Pembina Mata Kuliah", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "01_8_Soal_UTS_PIH_PHI_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Pengantar Ilmu Hukum dan Pengantar Hukum Indonesia (PIH–PHI), khususnya terkait Kontrak kuliah, orientasi perkuliahan; Konsep dasar hukum dan ilmu hukum; Ruang lingkup PIH vs PHI.! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Hakikat manusia sebagai zoon politicon; Manusia, masyarakat, dan kebutuhan hukum; Fungsi hukum menjaga ketertiban.! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Kaidah sosial: agama, kesusilaan, kesopanan, kebiasaan; Hakikat perlindungan kepentingan manusia.! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Sumber hukum materiil dan formil; Sumber hukum formil di Indonesia: UU, kebiasaan, yurisprudensi, traktat, doktrin.. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Pengantar Ilmu Hukum dan Pengantar Hukum Indonesia (PIH–PHI)!", "Berdasarkan kajian materi mengenai Pembidangan hukum di Indonesia: Hukum Publik dan Hukum Privat ; Hukum Materiil vs Formil., rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "1_SMT", "sem_label": "1 (Semester 1)", "angkt_sem": "2025/1", "mk": "Ilmu Negara", "dosen": "Dwi Wahyu Kartikasari, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "01_9_Soal_UTS_Ilmu_Negara_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Ilmu Negara, khususnya terkait Pengertian dan ruang lingkup ilmu negara; Objek kajian ilmu negara; Hubungan ilmu negara dengan ilmu politik dan HTN.! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Unsur konstitutif ; Unsur deklaratif ; Konsep kewarganegaraan.! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Teori Teokrasi , Perjanjian Masyarakat , Kekuasaan; Teori dalam perspektif Islam.! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Tipe negara Timur Kuno ; Tipe negara Yunani ; Tipe negara Romawi; Abad Pertengahan.. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Ilmu Negara!", "Berdasarkan kajian materi mengenai Ideologi Komunisme/Sosialisme; Ideologi Liberalisme/Kapitalisme; Ideologi Fasisme; Relevansi dan keunggulan Ideologi Pancasila., rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "2_SMT", "sem_label": "2 (Semester 2)", "angkt_sem": "2025/2", "mk": "Pendidikan Agama", "dosen": "Tim Dosen MKWU / Prodi PPKn", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "02_1_Soal_UTS_Agama_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Pendidikan Agama, khususnya terkait Orientasi perkuliahan; Kontrak belajar; Hakikat dan fungsi agama.! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Sumber-sumber ajaran agama ; Metodologi penafsiran teks.! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Hakikat ibadah; Dimensi spiritual dan pembentukan integritas pribadi.! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Hubungan agama dan sains; Integrasi ilmu dan wahyu.. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Pendidikan Agama!", "Berdasarkan kajian materi mengenai Konsep keluarga dalam agama; Solidaritas dan tanggung jawab sosial., rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "2_SMT", "sem_label": "2 (Semester 2)", "angkt_sem": "2025/2", "mk": "Bahasa Indonesia", "dosen": "Tim Dosen MKWU Bahasa Indonesia", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "02_2_Soal_UTS_Bahasa_Indonesia_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Bahasa Indonesia, khususnya terkait Kontrak kuliah; Sejarah, kedudukan, dan fungsi Bahasa Indonesia.! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Kaidah EYD V: Huruf kapital, huruf miring, kata turunan, gabungan kata.! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Kaidah tanda baca dan penyerapan istilah.! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Syarat kalimat efektif: Keutuhan struktur, keparalelan bentuk, kehematan kata, kelogisan.. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Bahasa Indonesia!", "Berdasarkan kajian materi mengenai Syarat paragraf efektif: Kesatuan , kepaduan , pola deduktif-induktif., rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "2_SMT", "sem_label": "2 (Semester 2)", "angkt_sem": "2025/2", "mk": "Belajar dan Pembelajaran", "dosen": "Dr. Mardi Widodo, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "02_3_Soal_UTS_Belajar_dan_Pembelajaran_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Belajar dan Pembelajaran, khususnya terkait Kontrak kuliah; Konsep dasar dan hakikat belajar; Ciri-ciri pembelajaran.! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Teori Behavioristik: Pavlov, Thorndike, Skinner; Pengondisian perilaku dan pembiasaan.! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Teori Kognitivisme: Piaget, Tahap perkembangan kognitif, Bruner, Advance Organizer Ausubel.! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Teori Humanistik ; Teori Sibernetik pemrosesan informasi.. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Belajar dan Pembelajaran!", "Berdasarkan kajian materi mengenai Faktor internal dan eksternal ., rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "2_SMT", "sem_label": "2 (Semester 2)", "angkt_sem": "2025/2", "mk": "Dasar dan Konsep Pendidikan Moral", "dosen": "Dwi Wahyu Kartikasari, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "02_4_Soal_UTS_Dasar_Konsep_Pendidikan_Moral_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Dasar dan Konsep Pendidikan Moral, khususnya terkait Kontrak kuliah; Hakikat nilai, norma, moral, dan etika.! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Fenomena krisis moral kontemporer; Patologi sosial dan urgensi pendidikan karakter.! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Teori perkembangan moral Jean Piaget: Moralitas heteronom vs otonom.! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Teori Pendidikan Karakter Thomas Lickona: Moral knowing, moral feeling, moral action.. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Dasar dan Konsep Pendidikan Moral!", "Berdasarkan kajian materi mengenai Pendekatan klarifikasi nilai ; Sintaks VCT percontohan., rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "2_SMT", "sem_label": "2 (Semester 2)", "angkt_sem": "2025/2", "mk": "Filsafat Pancasila", "dosen": "Dr. Mardi Widodo, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "02_5_Soal_UTS_Filsafat_Pancasila_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Filsafat Pancasila, khususnya terkait Kontrak kuliah; Pengertian filsafat, ciri berpikir filsafat, cabang-cabang filsafat.! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Genealogi Pancasila: Philosophische grondslag dan weltanschauung bangsa.! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Pancasila sebagai sistem filsafat; Susunan hierarkis-piramidal dan saling mengisi.! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Landasan Epistemologis Pancasila: Sumber pengetahuan, susunan tata pikir, kriteria kebenaran.. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Filsafat Pancasila!", "Berdasarkan kajian materi mengenai Komparasi ideologi: Pancasila vs Liberalisme-Kapitalisme, Marxisme-Komunisme, Teokrasi., rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "2_SMT", "sem_label": "2 (Semester 2)", "angkt_sem": "2025/2", "mk": "Filsafat Pendidikan", "dosen": "Dr. Usep Supriatna, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "02_6_Soal_UTS_Filsafat_Pendidikan_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Filsafat Pendidikan, khususnya terkait Kontrak kuliah; Konsep filsafat; Hakikat manusia sebagai makhluk terdidik.! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Landasan Ontologis Pendidikan: Hakikat keberadaan dan arah hidup manusia.! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Landasan Epistemologis Pendidikan: Sumber pengetahuan dan cara perolehan ilmu.! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Aliran Perenialisme: Tokoh , kebenaran abadi, Great Books curriculum.. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Filsafat Pendidikan!", "Berdasarkan kajian materi mengenai Aliran Progresivisme: John Dewey, belajar melalui pengalaman ., rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "2_SMT", "sem_label": "2 (Semester 2)", "angkt_sem": "2025/2", "mk": "Hukum Islam", "dosen": "Dr. Usep Supriatna, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "02_7_Soal_UTS_Hukum_Islam_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Hukum Islam, khususnya terkait Kontrak kuliah; Pengertian hukum, syariah, fiqh, dan qanun; Karakteristik hukum Islam.! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Sumber hukum Islam: Al-Qur'an, Sunnah, Ijma', Qiyas; Konsep dan urgensi ijtihad.! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Syariah vs Fiqh; Keragaman pandangan mazhab empat fiqh; Aspek fleksibilitas hukum Islam.! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Sejarah perkembangan hukum Islam: Periode Risalah, Khulafa, Mazhab, Taklid, dan Pembaruan.. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Hukum Islam!", "Berdasarkan kajian materi mengenai Hukum Perkawinan Islam: KHI Buku I, UU 1/1974 jo UU 16/2019, pencatatan nikah, perceraian., rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "2_SMT", "sem_label": "2 (Semester 2)", "angkt_sem": "2025/2", "mk": "Kewarganegaraan", "dosen": "Dwi Wahyu Kartikasari, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "02_8_Soal_UTS_Kewarganegaraan_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Kewarganegaraan, khususnya terkait Kontrak kuliah; Hakikat dan urgensi Pendidikan Kewarganegaraan.! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Identitas Nasional: Hakikat, unsur pembentuk, Pancasila sebagai jati diri bangsa.! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Integrasi Nasional: Dimensi integrasi, faktor pendorong, dan ancaman perpecahan.! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Hak dan Kewajiban Warga Negara: Hak asasi, kewajiban asasi, dan harmoni sosial.. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Kewarganegaraan!", "Berdasarkan kajian materi mengenai Demokrasi Pancasila: Prinsip kedaulatan rakyat, pemilu demokratis, etika berdemokrasi., rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "2_SMT", "sem_label": "2 (Semester 2)", "angkt_sem": "2025/2", "mk": "Pengantar Ilmu Sosial", "dosen": "Mario Fahmi Syahrial, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "02_9_Soal_UTS_Pengantar_Ilmu_Sosial_FINAL.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Pengantar Ilmu Sosial, khususnya terkait Kontrak kuliah; Hakikat dan ruang lingkup ilmu-ilmu sosial .! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Taksonomi keilmuan: Social sciences, social studies, dan humanities.! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Konsep dasar Sosiologi: Interaksi sosial, pranata sosial, stratifikasi sosial.! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Konsep dasar Geografi Sosial: Pendekatan keruangan, kelingkungan, interaksi spasial, demografi.. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Pengantar Ilmu Sosial!", "Berdasarkan kajian materi mengenai Konsep dasar Ilmu Politik: Hakikat kekuasaan, legitimasi, sistem politik, kebijakan publik., rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "3_SMT", "sem_label": "3 (Semester 3)", "angkt_sem": "2024/3", "mk": "Bahasa Inggris", "dosen": "Tim Dosen MKWU Bahasa Inggris", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "03_1_Soal_UTS_Bahasa_Inggris_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Bahasa Inggris, khususnya terkait Orientation, syllabus overview, self-introduction, greetings, professional background! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Descriptive writing: figures, institutions, and civic roles! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Expressing opinions, agreement, and disagreement in social issues! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Expository essay writing: structure and civic values in democratic society. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Bahasa Inggris!", "Berdasarkan kajian materi mengenai Legal and human rights terminology: international instruments and rule of law, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "3_SMT", "sem_label": "3 (Semester 3)", "angkt_sem": "2024/3", "mk": "Ilmu Alamiah Dasar (IAD)", "dosen": "Tim Dosen MKK", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "03_3_Soal_UTS_Ilmu_Alamiah_Dasar_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Ilmu Alamiah Dasar (IAD), khususnya terkait Perkembangan alam pikiran manusia, rasa ingin tahu, mitos, penalaran induktif-deduktif! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Hakikat IPA , kriteria sains, tahapan metode ilmiah dan sikap ilmiah! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Alam semesta, galaksi Bima Sakti, teori Big Bang, radiasi latar gelombang kosmik! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Dinamika bumi: litosfer , hidrosfer , atmosfer. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Ilmu Alamiah Dasar (IAD)!", "Berdasarkan kajian materi mengenai Biosfer, bioma dunia , Garis Wallace dan Garis Weber, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "3_SMT", "sem_label": "3 (Semester 3)", "angkt_sem": "2024/3", "mk": "Hukum Tata Negara", "dosen": "Dwi Wahyu Kartikasari, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "03_4_Soal_UTS_Hukum_Tata_Negara_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Hukum Tata Negara, khususnya terkait Pengertian, ruang lingkup, asas-asas, dan kedudukan HTN! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Sumber hukum HTN: sumber tertulis dan konvensi ketatanegaraan! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Sejarah ketatanegaraan: Proklamasi, RIS 1949, UUDS 1950, Dekrit 1959, Orde Baru! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Bentuk Negara Kesatuan , desentralisasi, otonomi daerah, daerah khusus/istimewa. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Hukum Tata Negara!", "Berdasarkan kajian materi mengenai Trias Politica, checks and balances horizontal dan vertikal di Indonesia, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "3_SMT", "sem_label": "3 (Semester 3)", "angkt_sem": "2024/3", "mk": "Hukum Pajak", "dosen": "Dwi Wahyu Kartikasari, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "03_5_Soal_UTS_Hukum_Pajak_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Hukum Pajak, khususnya terkait Pengertian pajak, unsur-unsur pajak, perbedaan pajak dengan retribusi! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Fungsi pajak: Budgeter, Regulerend, Distribusi pendapatan, dan Stabilisasi ekonomi! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai The Four Maxims Adam Smith dan implementasinya pada perpajakan Indonesia! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Sistem pemungutan: Official Assessment, Self Assessment, Withholding System. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Hukum Pajak!", "Berdasarkan kajian materi mengenai UU KUP: fungsi NPWP/NIK, Surat Pemberitahuan , sanksi administrasi denda dan bunga, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "3_SMT", "sem_label": "3 (Semester 3)", "angkt_sem": "2024/3", "mk": "Kriminologi", "dosen": "Tim Dosen PPKn", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "03_5_Soal_UTS_Kriminologi_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Kriminologi, khususnya terkait Definisi, objek studi, dan kegunaan kriminologi bagi pendidikan civic! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Hubungan kriminologi dengan hukum pidana dan penologi! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Konsep kejahatan formal vs material, statistik kejahatan, dan dark number! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Teori Anomi Robert K. Merton dan teori disorganisasi sosial Mazhab Chicago. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Kriminologi!", "Berdasarkan kajian materi mengenai Teori Kontrol Sosial Travis Hirschi dan Teori Pelabelan Howard S. Becker, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "3_SMT", "sem_label": "3 (Semester 3)", "angkt_sem": "2024/3", "mk": "Pengantar Filsafat", "dosen": "Dr. Usep Supriatna, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "03_6_Soal_UTS_Pengantar_Filsafat_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Pengantar Filsafat, khususnya terkait Hakikat filsafat, etimologi, kelahiran filsafat di Yunani! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Objek material vs formal, relasi filsafat, sains, dan agama! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Landasan Ontologi ilmu: metafisika, hakikat keberadaan, aliran ontologis! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Teori-teori kebenaran ilmiah dan tantangan post-truth. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Pengantar Filsafat!", "Berdasarkan kajian materi mengenai Teori etika normatif: Deontologi, Utilitarianisme, Virtue Ethics, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "3_SMT", "sem_label": "3 (Semester 3)", "angkt_sem": "2024/3", "mk": "Profesi dan Kebijakan Pendidikan", "dosen": "Dr.Sukisno, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "03_7_Soal_UTS_Profesi_Kependidikan_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Profesi dan Kebijakan Pendidikan, khususnya terkait Konsep profesi, profesionalisme, sejarah guru zaman kolonial hingga kemerdekaan! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Syarat jabatan profesi, panggilan jiwa , dan regulasi keguruan! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai 4 kompetensi guru: pedagogik, kepribadian, sosial, profesional! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Hak dan kewajiban guru, perlindungan hukum guru. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Profesi dan Kebijakan Pendidikan!", "Berdasarkan kajian materi mengenai Kebijakan PPG, sertifikasi pendidik, tunjangan profesi, dan evaluasi kinerja guru, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "3_SMT", "sem_label": "3 (Semester 3)", "angkt_sem": "2024/3", "mk": "Sosiologi Politik", "dosen": "Dr. Usep Supriatna, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "03_8_Soal_UTS_Sosiologi_Politik_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Sosiologi Politik, khususnya terkait Pengertian, ruang lingkup, dan manfaat sosiologi politik bagi PPKn! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Kekuasaan, wewenang, legitimasi, dan otoritas Weberian! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Teori-teori kekuasaan: Karl Marx, Pareto-Mosca-Michels, Robert Dahl! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Sosialisasi politik: pengertian, proses transmisi nilai, agen sosialisasi, dan civic education. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Sosiologi Politik!", "Berdasarkan kajian materi mengenai Opini publik, komunikasi politik, propaganda, buzzer, dan polarisasi digital, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "3_SMT", "sem_label": "3 (Semester 3)", "angkt_sem": "2024/3", "mk": "Hukum Pidana", "dosen": "Tim Dosen PPKn", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "03_9_Soal_UTS_Hukum_Pidana_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Hukum Pidana, khususnya terkait Pengertian, fungsi, sumber hukum, dan teori-teori pemidanaan! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Asas legalitas, larangan analogi, asas non-retroaktif, living law! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Tempus delicti, locus delicti, dan 4 asas ruang berlakunya pidana! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Ajaran kausalitas: conditio sine qua non, teori adekuat, teori individualisasi. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Hukum Pidana!", "Berdasarkan kajian materi mengenai Asas kesalahan , dolus, culpa, dan kemampuan bertanggung jawab, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "4_SMT", "sem_label": "4 (Semester 4)", "angkt_sem": "2024/4", "mk": "Hak Asasi Manusia", "dosen": "Dwi Wahyu Kartikasari, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "04_1_Soal_UTS_Hak_Asasi_Manusia_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Hak Asasi Manusia, khususnya terkait Hakikat, etimologi, sejarah pemikiran HAM dari Magna Charta ke era modern! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Prinsip-prinsip hukum HAM: universal, inalienable, indivisible, interdependent! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Universalitas HAM versus partikularisme budaya dalam konteks negara pasca-kolonial! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait International Bill of Human Rights: UDHR 1948, ICCPR, ICESCR, konvensi turunan. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Hak Asasi Manusia!", "Berdasarkan kajian materi mengenai UU No. 39 Tahun 1999: ruang lingkup hak, tanggung jawab pemerintah, dan kewajiban dasar, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "4_SMT", "sem_label": "4 (Semester 4)", "angkt_sem": "2024/4", "mk": "Hubungan Internasional", "dosen": "Mario Fahmi Syahrial, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "04_2_Soal_UTS_Hubungan_Internasional_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Hubungan Internasional, khususnya terkait Definisi, hakikat, dan urgensi studi HI bagi warga negara global! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Sistem Westphalia 1648, Perang Dunia, Perang Dingin, unipolar ke multipolar! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Aktor-aktor HI: Nation-State, IGO , INGO , MNC! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Konstruktivisme sosial, identitas nasional, dan teori dependensia Utara-Selatan. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Hubungan Internasional!", "Berdasarkan kajian materi mengenai Politik Luar Negeri Indonesia Bebas-Aktif: landasan, sejarah, dan tantangan geopolitik, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "4_SMT", "sem_label": "4 (Semester 4)", "angkt_sem": "2024/4", "mk": "Kewarganegaraan Digital", "dosen": "Dwi Wahyu Kartikasari, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "04_4_Soal_UTS_Kewarganegaraan_Digital_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Kewarganegaraan Digital, khususnya terkait Pengertian kewarganegaraan digital, transformasi ruang publik siber! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai 9 Elemen Digital Citizenship: Respect, Educate, Protect! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai 4 Pilar Literasi Digital Kominfo: Cakap, Etis, Aman, dan Berbudaya Digital! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Netiket, etika bermedia sosial, jenis-jenis cyberbullying dan dampaknya. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Kewarganegaraan Digital!", "Berdasarkan kajian materi mengenai UU No. 27/2022 tentang PDP: prinsip pemrosesan, hak subjek data, sanksi pelanggaran, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "4_SMT", "sem_label": "4 (Semester 4)", "angkt_sem": "2024/4", "mk": "Pendidikan Ilmu Sosial", "dosen": "Dr. Usep Supriatna, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "04_5_Soal_UTS_Pendidikan_Ilmu_Sosial_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Pendidikan Ilmu Sosial, khususnya terkait Pengertian, hakikat, dan tujuan Pendidikan Ilmu Sosial! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Perbedaan Social Sciences vs Social Studies: fokus, sasaran, dan metodologi! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Sejarah NCSS Amerika Serikat dan evolusi kurikulum IPS di Indonesia! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Konsep dasar geografi dan integrasinya dalam pemahaman wawasan nusantara. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Pendidikan Ilmu Sosial!", "Berdasarkan kajian materi mengenai Konsep ilmu ekonomi: kebutuhan, kelangkaan, produksi, konsumsi, ekonomi Pancasila, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "4_SMT", "sem_label": "4 (Semester 4)", "angkt_sem": "2024/4", "mk": "Pengenalan PGRI (Ke-PGRI-an)", "dosen": "Dr. Mardi Widodo, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "04_6_Soal_UTS_Pengenalan_PGRI_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Pengenalan PGRI (Ke-PGRI-an), khususnya terkait Pergerakan guru era pergerakan nasional: PGHB 1912, PGI 1932! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Guru pada masa fasisme Jepang: penutupan sekolah, kursus guru, semangat gerilya! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Kongres Guru Indonesia di Surakarta: deklarasi berdirinya PGRI, penetapan Hari Guru Nasional! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Jati diri PGRI: organisasi perjuangan, profesi, dan serikat ketenagakerjaan. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Pengenalan PGRI (Ke-PGRI-an)!", "Berdasarkan kajian materi mengenai Struktur organisasi PGRI: PB, Pengurus Provinsi, Pengurus Kabupaten, Cabang, Ranting, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "4_SMT", "sem_label": "4 (Semester 4)", "angkt_sem": "2024/4", "mk": "Sosiologi Indonesia", "dosen": "Mario Fahmi Syahrial, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "04_7_Soal_UTS_Sosiologi_Indonesia_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Sosiologi Indonesia, khususnya terkait Pengantar Sosiologi Indonesia: ruang lingkup dan pendekatan sosiologis! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Teori Plural Society Furnivall dan Dualisme Ekonomi Boeke! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Diferensiasi sosial horizontal dan stratifikasi vertikal menurut Nasikun! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Aliran sosiokultural Jawa: Santri, Abangan, Priyayi. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Sosiologi Indonesia!", "Berdasarkan kajian materi mengenai Kemiskinan struktural, ketimpangan pembangunan daerah, marginalisasi sosial, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "4_SMT", "sem_label": "4 (Semester 4)", "angkt_sem": "2024/4", "mk": "Politik Hukum", "dosen": "Dr. Usep Supriatna, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "04_8_Soal_UTS_Politik_Hukum_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Politik Hukum, khususnya terkait Pengertian politik hukum, ruang lingkup, fungsi ius constituendum! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Hubungan hukum dan politik: hukum determinan politik vs politik determinan hukum! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Cita hukum Pancasila: bintang pemandu politik hukum nasional! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Karakteristik produk hukum: responsif/populistis vs konservatif/ortodoks/elitis. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Politik Hukum!", "Berdasarkan kajian materi mengenai Politik hukum Orde Baru dan gelombang pembaruan hukum era Reformasi, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "4_SMT", "sem_label": "4 (Semester 4)", "angkt_sem": "2024/4", "mk": "Statistik", "dosen": "Tim Dosen Pendidikan PPKn", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "04_8_Soal_UTS_STATISTIK_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Statistik, khususnya terkait Pengertian statistika, jenis statistika, variabel penelitian, etika kejujuran data! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Skala pengukuran data: Nominal, Ordinal, Interval, Rasio! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Tabel distribusi frekuensi, histogram, poligon frekuensi, ogive! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Ukuran variasi: rentang, kuartil, varians, standar deviasi. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Statistik!", "Berdasarkan kajian materi mengenai Validitas isi, validitas konstruk, rumus Product Moment, Alpha Cronbach, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "4_SMT", "sem_label": "4 (Semester 4)", "angkt_sem": "2024/4", "mk": "Teori dan Hukum Konstitusi", "dosen": "Dwi Wahyu Kartikasari, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "04_9_Soal_UTS_Teori_Hukum_Konstitusi_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Teori dan Hukum Konstitusi, khususnya terkait Hakikat, etimologi, dan pengertian konstitusi menurut para ahli! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Konstitusi dalam arti luas vs sempit, naskah tertulis dan konvensi! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Doktrin Konstitusionalisme: prinsip negara hukum, jaminan HAM, dan peradilan independen! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Tiga nilai berlakunya konstitusi menurut Karl Loewenstein. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Teori dan Hukum Konstitusi!", "Berdasarkan kajian materi mengenai Pouvoir Constituant vs Pouvoir Constitue, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "4_SMT", "sem_label": "4 (Semester 4)", "angkt_sem": "2024/4", "mk": "Etika Digital", "dosen": "Dwi Wahyu Kartikasari, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "04_Soal_UTS_Etika_Digital_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Etika Digital, khususnya terkait Pengertian etika siber, revolusi informasi, manusia sebagai inforg dalam ruang infosphere! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Teori etika normatif dalam etika terapan siber: Deontologi, Utilitarianisme, dan Etika Keutamaan! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Kerangka PAPA Richard Mason dan relevansinya di era Big Data dan komersialisasi internet! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Netiket, kesantunan berbahasa, hate speech, kebebasan berekspresi di ruang digital, regulasi UU ITE. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Etika Digital!", "Berdasarkan kajian materi mengenai Hak kekayaan intelektual digital, piracy, open educational resources, lisensi Creative Commons, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "4_SMT", "sem_label": "4 (Semester 4)", "angkt_sem": "2024/4", "mk": "Hukum Perlindungan Konsumen", "dosen": "Tim Dosen Hukum Ekonomi & Perlindungan Konsumen PPKn", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "04_Soal_UTS_Hukum_Perlindungan_Konsumen_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Hukum Perlindungan Konsumen, khususnya terkait Konsep dasar konsumen akhir vs antara, asas-asas perlindungan konsumen, tujuan UUPK! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Sejarah doktrin Caveat Emptor menuju Caveat Venditor, Consumer Bill of Rights 1962, latar sosiologis lahirnya UUPK! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Hak dan kewajiban konsumen dan pelaku usaha , doktrin keseimbangan hak! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Doktrin kontrak baku , klausula eksonerasi, Pasal 18 UUPK, dan sanksi pembatalan demi hukum. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Hukum Perlindungan Konsumen!", "Berdasarkan kajian materi mengenai Tugas dan fungsi BPKN , LPKSM , pengawasan pemerintah, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "5_SMT", "sem_label": "5 (Semester 5)", "angkt_sem": "2023/5", "mk": "Sistem Politik Indonesia", "dosen": "Dr. Usep Supriatna, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "05_10_Soal_UTS_Sistem_Politik_Indonesia_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Sistem Politik Indonesia, khususnya terkait Teori sistem politik David Easton dan struktural fungsional Gabriel Almond! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Landasan filosofis dan konstitusional sistem politik Indonesia: Pancasila dan UUD 1945! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Budaya politik parokial, kaula, partisipan; pengaruh budaya politik patrimonial Jawa! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Infra-struktur politik: Parpol, Interest Groups, Pressure Groups, Tokoh Politik. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Sistem Politik Indonesia!", "Berdasarkan kajian materi mengenai Demokrasi Parlementer: Maklumat X 1945, kabinet parlementer, Pemilu 1955, Konstituante, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "5_SMT", "sem_label": "5 (Semester 5)", "angkt_sem": "2023/5", "mk": "Hukum Acara Pidana", "dosen": "Tim Dosen PPKn", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "05_2_Soal_UTS_Hukum_Acara_Pidana_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Hukum Acara Pidana, khususnya terkait Pengertian, tujuan, fungsi, dan sejarah pembentukan KUHAP! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Asas peradilan pidana: praduga tak bersalah, due process, bantuan hukum! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Konsep Integrated Criminal Justice System : Kepolisian, Kejaksaan, Pengadilan, LP! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Upaya paksa: Penangkapan, Penahanan, Penggeledahan, dan Penyitaan barang bukti. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Hukum Acara Pidana!", "Berdasarkan kajian materi mengenai Penuntutan, fungsi Jaksa Penuntut Umum, anatomi dan bentuk Surat Dakwaan, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "5_SMT", "sem_label": "5 (Semester 5)", "angkt_sem": "2023/5", "mk": "PLP - Pengembangan Strategi Pembelajaran", "dosen": "Dr. Sukisno, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "05_2_Soal_UTS_PLP_Pengembangan_Strategi_Pembelajaran_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah PLP - Pengembangan Strategi Pembelajaran, khususnya terkait Pengertian pendekatan, strategi, metode, teknik, taktik, dan model pembelajaran! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Faktor-faktor pemilihan strategi: tujuan kurikuler, karakteristik materi, gaya belajar siswa! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Pendekatan Saintifik 5M dan 7 Komponen Contextual Teaching and Learning! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Model PjBL: pertanyaan esensial, desain rencana proyek, penyusunan jadwal, evaluasi pengalaman belajar. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan PLP - Pengembangan Strategi Pembelajaran!", "Berdasarkan kajian materi mengenai Model VCT: pendekatan analisis nilai, metode dilema moral, klarifikasi nilai pribadi, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "5_SMT", "sem_label": "5 (Semester 5)", "angkt_sem": "2023/5", "mk": "Hukum Internasional", "dosen": "Mario Fahmi Syahrial, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "05_4_Soal_UTS_Hukum_Internasional_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Hukum Internasional, khususnya terkait Pengertian, istilah, perkembangan masyarakat internasional pasca-Westphalia 1648! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Dasar mengikat HI: Naturalis, Positivis, Mazhab Wina, Teori Kehendak Negara! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Hubungan HI dan Hukum Nasional: Monisme primat HI/HN, Dualisme, doktrin transformasi! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Law of Treaties: negosiasi, adopsi, ratifikasi, pensyaratan , berakhirnya traktat. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Hukum Internasional!", "Berdasarkan kajian materi mengenai Doktrin pengakuan: Teori Deklaratif vs Konstitutif, pengakuan de facto dan de jure, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "5_SMT", "sem_label": "5 (Semester 5)", "angkt_sem": "2023/5", "mk": "Kewirausahaan", "dosen": "Mario Fahmi Syahrial, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "05_6_Soal_UTS_Kewirausahaan_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Kewirausahaan, khususnya terkait Konsep dasar wirausaha, revolusi industri, peran UMKM nasional! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Entrepreneurial mindset, keberanian mengambil risiko terukur, etika bisnis Pancasila! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Identifikasi peluang usaha, teknik SCAMPER, tahapan Design Thinking! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait 9 Blok BMC: Value propositions, Customer relationships, Key activities, Cost structure. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Kewirausahaan!", "Berdasarkan kajian materi mengenai Perencanaan biaya operasional, penetapan harga jual, rumus BEP, laporan arus kas, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "5_SMT", "sem_label": "5 (Semester 5)", "angkt_sem": "2023/5", "mk": "Logika", "dosen": "Dr. Mardi Widodo, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "05_7_Soal_UTS_Logika_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Logika, khususnya terkait Pengertian logika, objek formal dan material, faedah menalar lurus! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Asas pemikiran Aristoteles dan Leibniz: principium identitatis, contradictionis, dll.! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Konsep dan term: konotasi, denotasi, jenis term, distribusi term subjek & predikat! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Proposisi kategoris: struktur S-K-P, 4 bentuk proposisi A, E, I, O. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Logika!", "Berdasarkan kajian materi mengenai Penalaran langsung : konversi, obversi, kontraposisi penuh dan parsial, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "5_SMT", "sem_label": "5 (Semester 5)", "angkt_sem": "2023/5", "mk": "Metodologi Penelitian", "dosen": "Dr. Sukisno, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "05_9_Soal_UTS_Metodologi_Penelitian_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Metodologi Penelitian, khususnya terkait Hakikat ilmu pengetahuan, metode ilmiah, siklus riset kependidikan! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Paradigma riset: Positivistik, Konstruktivistik/Interpretif, Kritis! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Identifikasi fenomena masalah, research gap, rumusan masalah dan tujuan penelitian! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Variabel penelitian kependidikan, indikator empiris, jenis-jenis hipotesis. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Metodologi Penelitian!", "Berdasarkan kajian materi mengenai Metode kualitatif: studi kasus, fenomenologi, pemilihan informan secara purposif, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "5_SMT", "sem_label": "5 (Semester 5)", "angkt_sem": "2023/5", "mk": "Asesmen Pembelajaran", "dosen": "Dr. Sukisno, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "05_Soal_UTS_Asesmen_Pembelajaran_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Asesmen Pembelajaran, khususnya terkait Hakikat evaluasi pembelajaran, etika objektivitas, peran evaluasi dalam mutu pendidikan PPKn! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Paradigma asesmen modern: Assessment of, for, dan as Learning! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Asesmen diagnostik: teknik wawancara awal, kuesioner profil belajar, tes prasyarat kognitif! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Kaidah penyusunan tes objektif: stimulus wacana, opsi jawaban homogen, penskoran PGK. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Asesmen Pembelajaran!", "Berdasarkan kajian materi mengenai Desain tugas kinerja autentik dan rubrik analitik dimensi ketercapaian, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "5_SMT", "sem_label": "5 (Semester 5)", "angkt_sem": "2023/5", "mk": "Pengembangan Media Pembelajaran", "dosen": "Dr. Sukisno, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "05_Soal_UTS_Pengembangan_Media_Pembelajaran_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Pengembangan Media Pembelajaran, khususnya terkait Pengertian media, fungsi media komunikasi pembelajaran, klasifikasi media! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Kerucut Pengalaman Edgar Dale, prinsip pemilihan media ACTION! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Model ASSURE: tahapan analisis siswa hingga evaluasi efektivitas media! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Teknik penyusunan storyboard: sketsa frame, naskah audio, durasi waktu, alur navigasi. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Pengembangan Media Pembelajaran!", "Berdasarkan kajian materi mengenai Presentasi interaktif: navigasi non-linier, triggers, embed kuis, interaktivitas multimedia, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "5_SMT", "sem_label": "5 (Semester 5)", "angkt_sem": "2023/5", "mk": "Perencanaan Pembelajaran", "dosen": "Dwi Wahyu Kartikasari, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "05_Soal_UTS_Perencanaan_Pembelajaran_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Perencanaan Pembelajaran, khususnya terkait Hakikat perencanaan pembelajaran, prinsip fleksibilitas dan keterpaduan sistem! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Model desain instruksional: Backward Design Understanding by Design Wiggins & McTighe! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Kalender pendidikan, perhitungan pekan efektif , distribusi jam pelajaran efektif! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Program Semester : distribusi mingguan TP, jadwal asesmen tengah/akhir semester. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Perencanaan Pembelajaran!", "Berdasarkan kajian materi mengenai Enduring Understanding dan Essential Questions, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "5_SMT", "sem_label": "5 (Semester 5)", "angkt_sem": "2023/5", "mk": "Gender dan Pendidikan", "dosen": "Mario Fahmi Syahrial, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "5_Soal_UTS_Soal_UTS_Gender_dan_Pendidikan_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Gender dan Pendidikan, khususnya terkait Konsep dasar seks, gender, perbedaan biologis vs sosial, manifestasi ketidakadilan gender! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Teori gender: Nature, Nurture, Culture; Pemikiran Feminisme Liberal, Radikal, dan Sosialis! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Gender dalam perspektif agama-agama di Indonesia dan konstruksi budaya patriarki vs matriarki! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Kebijakan PUG di bidang pendidikan: Inpres No. 9/2000, 7 prasyarat PUG, integrasi gender dalam Renstra Kemendikbud. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Gender dan Pendidikan!", "Berdasarkan kajian materi mengenai Bentuk-bentuk KBG di satuan pendidikan, perundungan siber berbasis gender, UU No. 12/2022 , Permendikbudristek No. 46/2023, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "6_SMT", "sem_label": "6 (Semester 6)", "angkt_sem": "2023/6", "mk": "Antropologi Budaya", "dosen": "Mario Fahmi Syahrial, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "06_1_Soal_UTS_Antropologi_Budaya_UNIROW.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Antropologi Budaya, khususnya terkait Konsep Dasar Antropologi! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Sejarah Perkembangan Antropologi! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Ruang Lingkup Antropologi Budaya! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Keanekaragaman Suku dan Budaya Indonesia. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Antropologi Budaya!", "Berdasarkan kajian materi mengenai Sistem Kekerabatan, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "6_SMT", "sem_label": "6 (Semester 6)", "angkt_sem": "2023/6", "mk": "Hukum Acara Tata Usaha Negara (HTUN)", "dosen": "Dwi Wahyu Kartikasari, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "06_1_Soal_UTS_HTUN_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Hukum Acara Tata Usaha Negara (HTUN), khususnya terkait Pengertian, tujuan, fungsi, dan latar belakang pembentukan UU No. 5/1986! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Asas praduga rechmatig, dominus litis, erga omnes, peradilan cepat, murah, sederhana! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Objek sengketa: Pasal 1 angka 9 UU 51/2009, KTUN deklaratoir vs konstitutif, pembatasan Pasal 2! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Subjek sengketa TUN: Penggugat, Tergugat, pihak ketiga yang berkepentingan. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Hukum Acara Tata Usaha Negara (HTUN)!", "Berdasarkan kajian materi mengenai Dasar gugatan Pasal 53 ayat 2 UU PTUN: bertentangan dengan peraturan dan melanggar AUPB, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "6_SMT", "sem_label": "6 (Semester 6)", "angkt_sem": "2023/6", "mk": "Hukum Agraria", "dosen": "Dwi Wahyu Kartikasari, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "06_2_Soal_UTS_Hukum_Agraria_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Hukum Agraria, khususnya terkait Pengertian agraria, objek kajian, signifikansi hukum agraria bagi kedaulatan pangan! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Hukum agraria kolonial: dualisme hukum, hak barat vs hak adat, asas domeinverklaring! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Latar belakang lahirnya UUPA 1960: unifikasi hukum, penyesuaian hukum adat, asas nasionalitas! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Pengakuan hak ulayat dan fungsi sosial hak atas tanah. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Hukum Agraria!", "Berdasarkan kajian materi mengenai Karakteristik HGU, HGB, Hak Pakai, Hak Pengelolaan , Hak Sewa untuk Bangunan, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "6_SMT", "sem_label": "6 (Semester 6)", "angkt_sem": "2023/6", "mk": "Pendidikan Anti Korupsi", "dosen": "Dr. Mardi Widodo, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "06_5_Soal_UTS_Pendidikan_Anti_Korupsi_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Pendidikan Anti Korupsi, khususnya terkait Pengertian korupsi, terminologi corruptio, sejarah korupsi nusantara! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Faktor penyebab korupsi: GONE Theory, Klitgaard Model, Fraud Triangle, aspek kultural! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Dampak masif korupsi: distorsi investasi, pembengkakan utang, penurunan penerimaan pajak! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait UU 31/1999 jo UU 20/2001: 7 kelompok delik Tipikor, perbedaan delik formil vs materiel. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Pendidikan Anti Korupsi!", "Berdasarkan kajian materi mengenai Instrumen pencegahan: e-LHKPN, Unit Pengendalian Gratifikasi , sertifikasi ISO 37001 SMAP, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "6_SMT", "sem_label": "6 (Semester 6)", "angkt_sem": "2023/6", "mk": "Psikologi Pendidikan dan Dinamika Kelompok", "dosen": "Dr. Sukisno, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "06_7_Soal_UTS_Psi Pend & dinamika klmpk_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Psikologi Pendidikan dan Dinamika Kelompok, khususnya terkait Pengertian psikologi pendidikan, ruang lingkup, peran guru sebagai pembimbing belajar! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Teori perkembangan kognitif Piaget dan teori sosial-kultural Vygotsky! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Teori perkembangan moral Lawrence Kohlberg: 3 level 6 tahapan pertimbangan moral! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Teori pemrosesan informasi, belajar bermakna David Ausubel, dan penemuan terbimbing Bruner. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Psikologi Pendidikan dan Dinamika Kelompok!", "Berdasarkan kajian materi mengenai Multiple Intelligences Gardner, gaya belajar VAK, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "6_SMT", "sem_label": "6 (Semester 6)", "angkt_sem": "2023/6", "mk": "Hukum Acara Perdata", "dosen": "Tim Dosen PPKn", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "06_8_Soal_UTS_Hukum_Acara_Perdata_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Hukum Acara Perdata, khususnya terkait Pengertian hukum acara perdata, fungsi, sumber hukum formil! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Asas beracara perdata: inisiatif para pihak, hakim pasif, audi et alteram partem, biaya ringan! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Perkara voluntair vs perdata sengketa contentiosa , penetapan vs vonis! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Kompetensi absolut dan relatif, Pasal 118 HIR, klausul domisili pilihan arbitrase/pengadilan. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Hukum Acara Perdata!", "Berdasarkan kajian materi mengenai Kewajiban mediasi perdata, mediator hakim/non-hakim, kaukus, akta perdamaian berkekuatan putusan inkracht, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "6_SMT", "sem_label": "6 (Semester 6)", "angkt_sem": "2023/6", "mk": "Manajemen & Pengembangan Program Sekolah", "dosen": "Dr. Mardi Widodo, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "06_Soal_UTS_Manajemen_dan_Pengembangan_Program_Sekolah_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Manajemen & Pengembangan Program Sekolah, khususnya terkait Konsep dasar MBS, filosofi desentralisasi pendidikan, tujuan dan manfaat MBS! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Pilar MBS: Otonomi sekolah, transparansi, akuntabilitas publik, partisipasi aktif warga sekolah! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai 8 Standar Nasional Pendidikan: Standar Isi, Proses, Kelulusan, Pendidik, Sarpras, Pengelolaan, Biaya, Penilaian! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Manajemen pembiayaan: regulasi dana BOS, aplikasi ARKAS, prinsip efisiensi, akuntabilitas audit BPK. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Manajemen & Pengembangan Program Sekolah!", "Berdasarkan kajian materi mengenai Manajemen kesiswaan: sistem PPDB, orientasi siswa , bimbingan konseling, OSIS/MPK, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "6_SMT", "sem_label": "6 (Semester 6)", "angkt_sem": "2023/6", "mk": "Pemerintahan Daerah dan Desa", "dosen": "Dwi Wahyu Kartikasari, M.Pd.", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "06_Soal_UTS_Pemerintahan_Daerah_dan_Desa_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Pemerintahan Daerah dan Desa, khususnya terkait Pengertian pemda, otonomi daerah, otonomi asli desa, asas subsidiaritas! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Asas desentralisasi, dekonsentrasi, tugas pembantuan, asas rekognisi dan subsidiaritas desa! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Pasal 18, 18A, 18B UUD 1945; evolusi UU Pemda dan posisi desa dalam sejarah ketatanegaraan RI! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Pembentukan daerah otonom, daerah persiapan, evaluasi DOB, pembentukan dan penataan status desa administratif/desa adat. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Pemerintahan Daerah dan Desa!", "Berdasarkan kajian materi mengenai Kedudukan DPRD dalam sistem presidensial lokal; 3 fungsi: Pembentukan Perda, Anggaran, Pengawasan; hak interpelasi, angket, menyatakan pendapat, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "6_SMT", "sem_label": "6 (Semester 6)", "angkt_sem": "2023/6", "mk": "Pengembangan Bahan Ajar", "dosen": "Dr. Mardi Widodo, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "06_Soal_UTS_Pengembangan_Bahan_Ajar_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Pengembangan Bahan Ajar, khususnya terkait Pengertian bahan ajar, fungsi bahan ajar bagi guru dan siswa, peran bahan ajar! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai 3 Prinsip pengembangan: Relevansi dengan CP, Konsistensi dengan TP, Kecukupan materi! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Ragam bahan ajar: modul, LKPD, handout, brosur, audio materi, e-modul flipbook! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Anatomi Handout: identitas mata pelajaran, ringkasan konsep esensial, bagan konsep, pertanyaan reflektif. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Pengembangan Bahan Ajar!", "Berdasarkan kajian materi mengenai Produksi LKPD: perumusan stimulus kasus riil, lembar kerja kelompok, rubrik penilaian unjuk kerja, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "6_SMT", "sem_label": "6 (Semester 6)", "angkt_sem": "2023/6", "mk": "Telaah Kurikulum", "dosen": "Dr. Sukisno, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "06_Soal_UTS_Telaah_Kurikulum_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Telaah Kurikulum, khususnya terkait Pengertian kurikulum, 4 dimensi kurikulum, peran dan fungsi kurikulum! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Landasan pengembangan kurikulum: Filosofis, Psikologis, Sosiokultural, dan Iptek! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Anatomi kurikulum: tujuan pendidikan, isi/bahan ajar, strategi pelaksanaan, evaluasi! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Kurikulum Berbasis Kompetensi , KTSP 2006, Kurikulum 2013. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Telaah Kurikulum!", "Berdasarkan kajian materi mengenai Perbedaan pokok K-13 vs Kurikulum Merdeka: KD vs CP, sistem tematik vs mata pelajaran, P5, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "7_SMT", "sem_label": "7 (Semester 7)", "angkt_sem": "2022/7", "mk": "Penelitian PPKn", "dosen": "Dr. Sukisno, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "07_6_Soal_UTS_Penelitian_PPKn_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Penelitian PPKn, khususnya terkait Karakteristik penelitian PPKn, domain pembentukan karakter warga negara! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Tipologi riset PPKn: Classroom-based research vs Community-based socio-legal research! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Analisis tren topik riset PPKn: digital citizenship, profil pelajar Pancasila, model Project Citizen! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Penelitian kualitatif PPKn: studi kasus, fenomenologi kebinekaan lokal, informan purposif. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Penelitian PPKn!", "Berdasarkan kajian materi mengenai Pengukuran Civic Knowledge: taksonomi Bloom revisi, penyusunan stimulus kasus, rubrik analitis, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "7_SMT", "sem_label": "7 (Semester 7)", "angkt_sem": "2022/7", "mk": "Seminar Bidang Studi", "dosen": "Tim Dosen PPKn", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "07_8_Soal_UTS_Seminar_Bidang_Studi_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Seminar Bidang Studi, khususnya terkait Etika akademik, plagiarisme, fabrikasi data, gaya selingkung skripsi FKIP UNIROW! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Penelusuran database ilmiah, kata kunci Boolean, instalasi dan pemanfaatan Mendeley Desktop! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Anatomi Bab I: fenomena kesenjangan, research gap, kebaruan, justifikasi pemilihan judul! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Anatomi Bab II: Grand Theory, Middle Theory, Applied Theory, definisi konseptual variabel. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Seminar Bidang Studi!", "Berdasarkan kajian materi mengenai Jenis-jenis hipotesis: hipotesis kerja vs nol, hipotesis asosiatif/komparatif, fokus kualitatif, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}, {"semester": "8_SMT", "sem_label": "8 (Semester 8)", "angkt_sem": "2022/8", "mk": "Hukum Adat", "dosen": "Mario Fahmi Syahrial, M.Pd", "waktu": "90 menit", "sifat": "Tutup Buku", "file_docx": "08_3_Soal_UTS_Hukum_Adat_OBE.docx", "soal": ["Jelaskan secara komprehensif konsep dasar, hakikat, dan ruang lingkup kajian dalam mata kuliah Hukum Adat, khususnya terkait Pengertian hukum adat, 4 corak dasar hukum adat! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?", "Kaji dan analisislah landasan utama serta prinsip-prinsip operasional mengenai Dasar filosofis, sosiologis, yuridis Pasal 18B ayat UUD 1945! Bagaimana keterkaitan prinsip tersebut dalam membentuk kerangka berpikir ilmiah yang kokoh?", "Lakukan telaah kritis terhadap struktur dan dinamika perkembangan mengenai Sejarah hukum adat, Van Vollenhoven, Ter Haar, Teori Reseptio! Bandingkan berbagai pendekatan atau paradigma yang berkembang, serta jelaskan kekuatan dan kelemahannya masing-masing!", "Dalam konteks kehidupan bermasyarakat, berbangsa, dan bernegara saat ini, muncul berbagai problematika nyata terkait Persekutuan adat genealogis dan teritorial. Analisislah akar masalah dari fenomena tersebut berdasarkan teori dan perspektif keilmuan Hukum Adat!", "Berdasarkan kajian materi mengenai Hak ulayat dalam Pasal 3 & 5 UUPA 1960, Putusan MK No. 35/PUU-X/2012, rancanglah sebuah gagasan/strategi pemecahan masalah yang inovatif, aplikatif, dan berorientasi pada pencapaian Profil Pelajar Pancasila atau tata kelola berkeadaban yang relevan dengan bidang PPKn!"]}];
 
-    let currentPreset = 'pendidikan';
+    let currentCourseIndex = 0;
 
-    function renderQuestions() {
-      const list = sampleQuestions[currentPreset];
-      const container = document.getElementById('questionsContainer');
-      container.innerHTML = list.map((q, idx) => `
-        <div class="exam-question-item">
-          <b>${idx + 1}.</b> ${q}
-        </div>
+    function initPage() {
+      // Find default Telaah Kurikulum or first course
+      const defIdx = ALL_COURSES.findIndex(c => c.mk.toLowerCase().includes('telaah kurikulum'));
+      currentCourseIndex = defIdx >= 0 ? defIdx : 0;
+
+      // Populate Select Dropdown
+      const sel = document.getElementById('courseSelect');
+      sel.innerHTML = ALL_COURSES.map((c, i) => `
+        <option value="${i}" ${i === currentCourseIndex ? 'selected' : ''}>
+          [${c.semester}] ${c.mk} — ${c.dosen}
+        </option>
       `).join('');
+
+      loadCourse(currentCourseIndex);
+      renderCatalog(ALL_COURSES);
+    }
+
+    function onSelectCourse(idx) {
+      currentCourseIndex = parseInt(idx);
+      loadCourse(currentCourseIndex);
+      showToast(`Memuat naskah: ${ALL_COURSES[currentCourseIndex].mk}`);
+    }
+
+    function loadCourse(idx) {
+      const c = ALL_COURSES[idx];
+      document.getElementById('inpMK').value = c.mk;
+      document.getElementById('inpDosen').value = c.dosen;
+      document.getElementById('inpSem').value = c.angkt_sem;
+      document.getElementById('inpWaktu').value = c.waktu;
+      document.getElementById('inpSifat').value = c.sifat;
+
+      updateExamPreview();
+      renderQuestions(c.soal);
     }
 
     function updateExamPreview() {
@@ -562,22 +684,77 @@
       document.getElementById('prevSifat').innerText = document.getElementById('inpSifat').value;
     }
 
-    function setPreset(type) {
-      currentPreset = type;
-      if (type === 'hukum') {
-        document.getElementById('inpMK').value = 'Hukum Tata Negara';
-        document.getElementById('inpDosen').value = 'Dwi Wahyu Kartikasari, M.Pd.';
-        document.getElementById('inpSem').value = '2024/3';
-        document.getElementById('inpSifat').value = 'Tutup Buku';
+    function renderQuestions(soalList) {
+      const container = document.getElementById('questionsContainer');
+      container.innerHTML = soalList.map((q, idx) => `
+        <div class="exam-q-item">
+          <b>${idx + 1}.</b> ${q}
+        </div>
+      `).join('');
+    }
+
+    function renderCatalog(list) {
+      const grid = document.getElementById('catalogGrid');
+      grid.innerHTML = list.map((c, i) => {
+        const originalIndex = ALL_COURSES.indexOf(c);
+        return `
+          <div class="course-card" onclick="onSelectFromCatalog(${originalIndex})">
+            <div>
+              <div class="course-card-sem">${c.sem_label}</div>
+              <div class="course-card-title">${c.mk}</div>
+            </div>
+            <div class="course-card-dosen">👤 ${c.dosen}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function onSelectFromCatalog(idx) {
+      document.getElementById('courseSelect').value = idx;
+      onSelectCourse(idx);
+      document.getElementById('simulator').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function filterCatalog(semKey, btn) {
+      document.querySelectorAll('.sem-chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      if (semKey === 'ALL') {
+        renderCatalog(ALL_COURSES);
       } else {
-        document.getElementById('inpMK').value = 'Telaah Kurikulum PPKn';
-        document.getElementById('inpDosen').value = 'Dr. Sukisno, M.Pd.';
-        document.getElementById('inpSem').value = '2023/6';
-        document.getElementById('inpSifat').value = 'Tutup Buku';
+        const filtered = ALL_COURSES.filter(c => c.semester === semKey);
+        renderCatalog(filtered);
       }
-      updateExamPreview();
-      renderQuestions();
-      showToast(`Preset diganti: ${type === 'hukum' ? 'Bidang Hukum' : 'Bidang Pendidikan'}`);
+    }
+
+    function copyMarkdownFormat() {
+      const c = ALL_COURSES[currentCourseIndex];
+      const md = `# NASKAH SOAL UJIAN TENGAH SEMESTER (UTS)
+## FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN (FKIP)
+### UNIVERSITAS PGRI RONGGOLAWE (UNIROW) TUBAN
+**Tahun Akademik 2025/2026**
+
+---
+
+### IDENTITAS MATA KULIAH
+| Parameter | Informasi | Parameter | Informasi |
+| :--- | :--- | :--- | :--- |
+| **Program Studi** | Pendidikan Pancasila dan Kewarganegaraan | **Dosen Pengampu** | ${c.dosen} |
+| **Mata Kuliah** | ${c.mk} | **Waktu Ujian** | ${c.waktu} |
+| **Angkatan / Semester** | ${c.angkt_sem} | **Hari / Tanggal** | Sesuai Jadwal |
+| **Sifat Ujian** | ${c.sifat} | **Status** | Resmi Terverifikasi OBE |
+
+---
+
+### BUTIR SOAL EVALUASI:
+${c.soal.map((q, i) => `${i + 1}. **${q}**`).join('\n\n')}
+
+---
+*SELAMAT MENGERJAKAN*`;
+
+      navigator.clipboard.writeText(md).then(() => {
+        showToast('Naskah Markdown berhasil disalin!');
+      });
     }
 
     function switchTab(tabId, el) {
@@ -591,7 +768,7 @@
       const toast = document.getElementById('toast');
       toast.innerText = msg;
       toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 2800);
+      setTimeout(() => toast.classList.remove('show'), 2600);
     }
 
     function copyText(elemId) {
@@ -603,9 +780,7 @@
       navigator.clipboard.writeText('/uts-unirow @RPS_Mata_Kuliah.docx').then(() => showToast('Command berhasil disalin!'));
     }
 
-    // Init
-    updateExamPreview();
-    renderQuestions();
+    window.onload = initPage;
   </script>
 </body>
 </html>
