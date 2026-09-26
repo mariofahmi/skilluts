@@ -1,7 +1,6 @@
 # Skill Soal UTS UNIROW Tuban (FKIP)
 
 [![Antigravity Skill](https://img.shields.io/badge/Antigravity-Skill-blue.svg)](https://github.com/mariofahmi/skilluts)
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-brightgreen.svg)](https://mariofahmi.github.io/skilluts/)
 [![Template](https://img.shields.io/badge/Template-UNIROW%20FKIP-red.svg)](https://unirow.ac.id)
 [![Kurikulum](https://img.shields.io/badge/Kurikulum-OBE%202026-green.svg)](https://unirow.ac.id)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -33,7 +32,6 @@ skilluts/
 ├── LICENSE (MIT)
 ├── README.md                          # Dokumentasi resmi
 ├── SKILL.md                           # Konfigurasi skill Antigravity IDE
-├── index.html                         # Landing page interaktif GitHub Pages
 ├── assets/
 │   └── Template_UTS_UNIROW.docx       # Template master resmi UNIROW FKIP
 ├── references/
