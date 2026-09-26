@@ -75,7 +75,7 @@ def build_question_paragraphs(soal_list):
 
         # Paragraf nomor + teks soal (hanging indent ala nomor urut)
         p = (
-            '<w:p><w:pPr><w:spacing w:before="120" w:after="60" w:line="360" w:lineRule="auto"/>'
+            '<w:p><w:pPr><w:spacing w:before="60" w:after="30" w:line="260" w:lineRule="auto"/>'
             '<w:ind w:left="720" w:hanging="360"/>'
             f'{RPR_NORMAL}</w:pPr>'
             f'<w:r>{RPR_NORMAL}<w:t xml:space="preserve">{i}. {teks}</w:t></w:r></w:p>'
@@ -89,7 +89,7 @@ def build_question_paragraphs(soal_list):
                 opt_escaped = xml_escape(str(opt_text).strip())
                 label = huruf[j] if j < len(huruf) else str(j + 1)
                 op = (
-                    '<w:p><w:pPr><w:spacing w:after="0" w:line="360" w:lineRule="auto"/>'
+                    '<w:p><w:pPr><w:spacing w:after="0" w:line="240" w:lineRule="auto"/>'
                     '<w:ind w:left="1080" w:hanging="360"/>'
                     f'{RPR_NORMAL}</w:pPr>'
                     f'<w:r>{RPR_NORMAL}<w:t xml:space="preserve">{label}. {opt_escaped}</w:t></w:r></w:p>'
