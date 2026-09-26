@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill Soal UTS UNIROW FKIP — Generator Ujian Resmi OBE 2026</title>
+  <meta name="description" content="AI Agentic Skill resmi Google Antigravity untuk menyusun naskah Soal Ujian Tengah Semester (UTS) ber-KOP resmi dan logo UNIROW FKIP berbasis kurikulum OBE 2026.">
+  <meta name="keywords" content="Soal UTS, UNIROW Tuban, FKIP, Kurikulum OBE, Antigravity Skill, Ujian Tengah Semester, DOCX Generator">
+  <meta name="author" content="Mario Fahmi - UNIROW Tuban">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Skill Soal UTS UNIROW FKIP — OBE 2026">
+  <meta property="og:description" content="Otomasi penyusunan naskah Soal UTS resmi ber-KOP dan logo UNIROW FKIP dengan Taksonomi Bloom.">
+  <meta property="og:url" content="https://mariofahmi.github.io/skilluts/">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #07090e;
+      --bg-surface: rgba(15, 23, 42, 0.65);
+      --bg-card: rgba(255, 255, 255, 0.03);
+      --bg-card-hover: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-focus: rgba(239, 68, 68, 0.5);
+      --primary: #ef4444;
+      --primary-hover: #dc2626;
+      --primary-glow: rgba(239, 68, 68, 0.25);
+      --cyan: #06b6d4;
+      --cyan-glow: rgba(6, 182, 212, 0.25);
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --indigo: #6366f1;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-sub: #64748b;
+      --radius: 16px;
+      --radius-sm: 8px;
+      --font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--bg); color: var(--text); font-family: var(--font); line-height: 1.6; overflow-x: hidden; }
+
+    /* Ambient Glow Background */
+    .ambient-bg { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .ambient-sphere { position: absolute; border-radius: 50%; filter: blur(120px); opacity: 0.4; animation: float 22s ease-in-out infinite alternate; }
+    .sphere-1 { width: 600px; height: 600px; background: radial-gradient(circle, #991b1b 0%, rgba(153, 27, 27, 0) 70%); top: -150px; left: -100px; }
+    .sphere-2 { width: 500px; height: 500px; background: radial-gradient(circle, #1e3a8a 0%, rgba(30, 58, 138, 0) 70%); top: 30%; right: -150px; animation-delay: -8s; }
+    .grid-overlay {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black 40%, transparent 100%);
+    }
+
+    @keyframes float {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(40px, 30px) scale(1.08); }
+      100% { transform: translate(-30px, 50px) scale(0.95); }
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+    /* Navbar */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      background: rgba(7, 9, 14, 0.75); border-bottom: 1px solid var(--border);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 74px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); font-weight: 700; font-size: 1.15rem; }
+    .brand-icon {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, var(--primary), #b91c1c);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 0 20px var(--primary-glow);
+    }
+    .brand-icon svg { width: 22px; height: 22px; fill: none; stroke: white; stroke-width: 2.2; }
+    .brand-tag { font-size: 0.72rem; background: rgba(239, 68, 68, 0.15); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.3); padding: 3px 8px; border-radius: 20px; font-weight: 600; margin-left: 4px; }
+
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 10px 20px; border-radius: 10px; font-weight: 600; font-size: 0.92rem;
+      text-decoration: none; cursor: pointer; transition: all 0.25s ease; border: 1px solid transparent;
+      font-family: inherit;
+    }
+    .btn-primary { background: linear-gradient(135deg, var(--primary), #b91c1c); color: white; box-shadow: 0 4px 20px var(--primary-glow); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(239, 68, 68, 0.45); }
+    .btn-secondary { background: var(--bg-card); color: var(--text); border: 1px solid var(--border); backdrop-filter: blur(12px); }
+    .btn-secondary:hover { background: var(--bg-card-hover); border-color: rgba(255, 255, 255, 0.2); transform: translateY(-2px); }
+
+    /* Hero */
+    .hero { padding: 90px 0 60px; text-align: center; }
+    .badge-pill {
+      display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 30px;
+      background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.28); color: #fecaca;
+      font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; box-shadow: 0 0 25px rgba(239, 68, 68, 0.15);
+    }
+    .badge-pill-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 10px var(--primary); }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 5.5vw, 4.2rem); font-weight: 800; line-height: 1.15;
+      letter-spacing: -0.03em; margin-bottom: 22px;
+      background: linear-gradient(180deg, #ffffff 30%, #94a3b8 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero-title .gradient-text {
+      background: linear-gradient(135deg, #f87171 0%, #fb923c 50%, #38bdf8 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero-desc { font-size: clamp(1.05rem, 2vw, 1.25rem); color: var(--text-muted); max-width: 780px; margin: 0 auto 36px; font-weight: 400; }
+    .hero-cta { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+
+    .hero-stats { display: flex; justify-content: center; gap: 48px; margin-top: 20px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .stat-item { text-align: center; }
+    .stat-num { font-size: 2rem; font-weight: 800; color: var(--text); font-family: var(--font-mono); }
+    .stat-label { font-size: 0.82rem; color: var(--text-sub); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+
+    /* Interactive Simulator */
+    .section { padding: 80px 0; }
+    .section-header { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+    .section-tag { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; color: #f87171; font-weight: 700; margin-bottom: 12px; display: inline-block; }
+    .section-title { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; }
+    .section-desc { font-size: 1.05rem; color: var(--text-muted); }
+
+    .simulator-card {
+      background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 36px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); backdrop-filter: blur(16px);
+    }
+    .sim-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: start; }
+    @media (max-width: 960px) { .sim-grid { grid-template-columns: 1fr; } }
+
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-bottom: 8px; }
+    .form-input {
+      width: 100%; padding: 10px 14px; background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border); border-radius: 8px; color: #fff; font-family: inherit; font-size: 0.95rem;
+      outline: none; transition: border-color 0.2s;
+    }
+    .form-input:focus { border-color: var(--primary); }
+
+    /* Exam Paper Preview */
+    .exam-paper {
+      background: #ffffff; color: #111827; border-radius: 8px; padding: 40px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); font-family: 'Times New Roman', serif;
+      line-height: 1.5; font-size: 0.95rem;
+    }
+    .exam-kop { text-align: center; border-bottom: 2px solid #111827; padding-bottom: 12px; margin-bottom: 16px; position: relative; }
+    .exam-kop-title { font-size: 1.15rem; font-weight: bold; text-transform: uppercase; }
+    .exam-kop-sub { font-size: 0.95rem; font-weight: bold; }
+    .exam-kop-uni { font-size: 1.15rem; font-weight: bold; }
+    .exam-kop-addr { font-size: 0.78rem; color: #374151; }
+
+    .exam-meta-table { width: 100%; border-collapse: collapse; margin-bottom: 18px; font-size: 0.88rem; }
+    .exam-meta-table td { padding: 4px 8px; border: 1px solid #d1d5db; }
+    .exam-meta-table .tbl-header { background: #f3f4f6; font-weight: bold; text-align: center; }
+
+    .exam-instr { font-size: 0.85rem; font-style: italic; margin-bottom: 16px; }
+    .exam-question-item { margin-bottom: 12px; padding-left: 24px; text-indent: -24px; text-align: justify; }
+
+    /* Bento Grid */
+    .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media (max-width: 900px) { .bento-grid { grid-template-columns: 1fr; } }
+    .bento-card {
+      background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 32px; transition: all 0.3s ease; display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .bento-card:hover { transform: translateY(-4px); border-color: rgba(255, 255, 255, 0.2); box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4); }
+    .bento-icon {
+      width: 48px; height: 48px; border-radius: 12px; background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px; color: #f87171;
+    }
+    .bento-card:hover .bento-icon { background: var(--primary); color: white; box-shadow: 0 0 20px var(--primary-glow); }
+    .bento-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 10px; }
+    .bento-desc { font-size: 0.95rem; color: var(--text-muted); }
+    .bento-span-2 { grid-column: span 2; }
+    @media (max-width: 900px) { .bento-span-2 { grid-column: span 1; } }
+
+    /* Code Tabs */
+    .install-box { background: rgba(10, 14, 28, 0.9); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; margin-top: 24px; }
+    .tabs { display: flex; gap: 12px; margin-bottom: 20px; border-bottom: 1px solid var(--border); padding-bottom: 12px; }
+    .tab-btn { background: none; border: none; color: var(--text-muted); font-size: 0.92rem; font-weight: 600; padding: 8px 16px; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
+    .tab-btn.active { background: rgba(239, 68, 68, 0.15); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.3); }
+    .code-block {
+      background: #04060a; border: 1px solid var(--border); border-radius: 10px; padding: 18px;
+      font-family: var(--font-mono); font-size: 0.88rem; display: flex; justify-content: space-between; align-items: center; color: #e2e8f0;
+    }
+    .copy-btn {
+      background: rgba(255, 255, 255, 0.08); border: 1px solid var(--border); color: var(--text);
+      padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.2s;
+    }
+    .copy-btn:hover { background: var(--primary); border-color: var(--primary); }
+
+    /* Toast */
+    #toast {
+      position: fixed; bottom: 24px; right: 24px; background: var(--primary); color: white;
+      padding: 12px 24px; border-radius: 10px; font-weight: 600; font-size: 0.9rem;
+      opacity: 0; transform: translateY(20px); transition: all 0.3s ease; z-index: 1000;
+    }
+    #toast.show { opacity: 1; transform: translateY(0); }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); padding: 60px 0 40px; background: rgba(5, 7, 12, 0.9); margin-top: 80px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient BG -->
+  <div class="ambient-bg">
+    <div class="ambient-sphere sphere-1"></div>
+    <div class="ambient-sphere sphere-2"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <span>Skill Soal UTS</span>
+        <span class="brand-tag">UNIROW FKIP</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#fitur">Fitur Unggulan</a></li>
+        <li><a href="#simulator">Live Generator</a></li>
+        <li><a href="#instalasi">Instalasi IDE</a></li>
+      </ul>
+
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <a href="https://github.com/mariofahmi/skilluts" target="_blank" rel="noopener" class="btn btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+        <a href="#simulator" class="btn btn-primary">Coba Live Preview</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="badge-pill">
+        <span class="badge-pill-dot"></span>
+        <span>Google Antigravity & Agentic AI Official Skill</span>
+      </div>
+
+      <h1 class="hero-title">
+        Generator Naskah Soal UTS<br>
+        <span class="gradient-text">Resmi UNIROW FKIP (OBE 2026)</span>
+      </h1>
+
+      <p class="hero-desc">
+        Hasilkan naskah Soal Ujian Tengah Semester (DOCX Siap Cetak & Markdown) ber-KOP resmi, logo ber-anchor, 
+        serta butir soal esai dan pilihan ganda berbasis Taksonomi Bloom yang disarikan langsung dari RPS kurikulum OBE.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#simulator" class="btn btn-primary" style="padding: 14px 28px; font-size: 1rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          <span>Simulasi Naskah Ujian</span>
+        </a>
+        <button class="btn btn-secondary" onclick="copyInstallCmd()" style="padding: 14px 24px; font-size: 1rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span>Salin Command /uts</span>
+        </button>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item"><div class="stat-num">FKIP</div><div class="stat-label">Template Resmi</div></div>
+        <div class="stat-item"><div class="stat-num">C2–C6</div><div class="stat-label">Taksonomi Bloom</div></div>
+        <div class="stat-item"><div class="stat-num">Pure Py</div><div class="stat-label">Zero Dependencies</div></div>
+        <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Preservasi XML & Logo</div></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Interactive Live Simulator Section -->
+  <section id="simulator" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Simulator Interaktif</span>
+        <h2 class="section-title">Pratinjau Lembar Soal Ujian</h2>
+        <p class="section-desc">Ubah data mata kuliah di panel kiri, dan lihat pembaruan lembar naskah Soal UTS secara langsung pada panel kanan.</p>
+      </div>
+
+      <div class="simulator-card">
+        <div class="sim-grid">
+          <!-- Control Panel -->
+          <div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 20px; color: #fff;">Parameter Ujian:</h3>
+            <div class="form-group">
+              <label>Nama Mata Kuliah</label>
+              <input type="text" id="inpMK" class="form-input" value="Telaah Kurikulum PPKn" oninput="updateExamPreview()">
+            </div>
+            <div class="form-group">
+              <label>Dosen Pengampu / Pengembang RPS</label>
+              <input type="text" id="inpDosen" class="form-input" value="Dr. Sukisno, M.Pd." oninput="updateExamPreview()">
+            </div>
+            <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <div>
+                <label>Angkatan / Semester</label>
+                <input type="text" id="inpSem" class="form-input" value="2023/6" oninput="updateExamPreview()">
+              </div>
+              <div>
+                <label>Waktu Pengerjaan</label>
+                <input type="text" id="inpWaktu" class="form-input" value="90 menit" oninput="updateExamPreview()">
+              </div>
+            </div>
+            <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <div>
+                <label>Hari Pelaksanaan</label>
+                <input type="text" id="inpHari" class="form-input" value="Senin" oninput="updateExamPreview()">
+              </div>
+              <div>
+                <label>Sifat Ujian</label>
+                <input type="text" id="inpSifat" class="form-input" value="Tutup Buku" oninput="updateExamPreview()">
+              </div>
+            </div>
+
+            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border);">
+              <h4 style="font-size: 0.95rem; margin-bottom: 12px; color: var(--text-muted);">Pilihan Soal Contoh:</h4>
+              <button class="btn btn-secondary" onclick="setPreset('hukum')" style="width: 100%; margin-bottom: 8px; justify-content: flex-start; font-size: 0.85rem;">
+                ⚖️ Mata Kuliah Bidang Hukum (HTN / HAN)
+              </button>
+              <button class="btn btn-secondary" onclick="setPreset('pendidikan')" style="width: 100%; justify-content: flex-start; font-size: 0.85rem;">
+                📚 Mata Kuliah Bidang Kependidikan (Kurikulum / PLP)
+              </button>
+            </div>
+          </div>
+
+          <!-- Document Render Output -->
+          <div class="exam-paper" id="paperArea">
+            <div class="exam-kop">
+              <div class="exam-kop-title">UJIAN TENGAH SEMESTER</div>
+              <div class="exam-kop-sub">TAHUN AKADEMIK 2025/2026</div>
+              <div class="exam-kop-uni">UNIVERSITAS PGRI RONGGOLAWE TUBAN</div>
+              <div class="exam-kop-addr">Jl. Manunggal 61 Tuban, Telp. (0356) 322233, Fax (0356) 331578 | www.unirow.ac.id</div>
+            </div>
+
+            <table class="exam-meta-table">
+              <tr>
+                <td colspan="4" class="tbl-header">FAKULTAS KEGURUAN DAN ILMU PENDIDIKAN</td>
+              </tr>
+              <tr>
+                <td style="width: 20%; font-weight: bold;">Prodi</td>
+                <td style="width: 40%;">Pendidikan Pancasila dan Kewarganegaraan</td>
+                <td style="width: 15%; font-weight: bold;">Dosen</td>
+                <td style="width: 25%;" id="prevDosen">Dr. Sukisno, M.Pd.</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">Mata kuliah</td>
+                <td id="prevMK">Telaah Kurikulum PPKn</td>
+                <td style="font-weight: bold;">Waktu</td>
+                <td id="prevWaktu">90 menit</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">Angkt/Semester</td>
+                <td id="prevSem">2023/6</td>
+                <td style="font-weight: bold;">Hari</td>
+                <td id="prevHari">Senin</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">Sifat</td>
+                <td id="prevSifat">Tutup Buku</td>
+                <td style="font-weight: bold;">Tanggal</td>
+                <td>Sesuai Jadwal</td>
+              </tr>
+            </table>
+
+            <div class="exam-instr">Jawablah pertanyaan dibawah ini dengan benar:</div>
+
+            <div id="questionsContainer">
+              <!-- Rendered via JS -->
+            </div>
+
+            <div style="text-align: center; font-weight: bold; margin-top: 24px; letter-spacing: 0.1em; text-transform: uppercase;">
+              SELAMAT MENGERJAKAN
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Bento Grid -->
+  <section id="fitur" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Keunggulan Engine</span>
+        <h2 class="section-title">Arsitektur Generator Soal UTS</h2>
+        <p class="section-desc">Dirancang untuk menghasilkan naskah ujian yang presisi, aman dari kerusakan XML, dan memenuhi standar mutu OBE.</p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="bento-card bento-span-2">
+          <div>
+            <div class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+            </div>
+            <h3 class="bento-title">Preservasi Struktur Master Template Word XML</h3>
+            <p class="bento-desc">
+              Tidak membangun dokumen dari nol. Engine menggunakan teknik injeksi token XML yang menjaga posisi logo ber-anchor (floating image), kop surat resmi kampus, dan properti tabel tetap utuh 100%.
+            </p>
+          </div>
+        </div>
+
+        <div class="bento-card">
+          <div>
+            <div class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3 class="bento-title">Taksonomi Bloom (C2–C6)</h3>
+            <p class="bento-desc">
+              Butir soal otomatis dikonstruksi secara analitis dari materi pertemuan 1–7 RPS dengan Kata Kerja Operasional yang terukur.
+            </p>
+          </div>
+        </div>
+
+        <div class="bento-card">
+          <div>
+            <div class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3 class="bento-title">Dual Output (DOCX & MD)</h3>
+            <p class="bento-desc">
+              Menghasilkan berkas Word `.docx` siap cetak sekaligus Markdown `.md` untuk integrasi ke portal LMS dan dokumentasi repositori.
+            </p>
+          </div>
+        </div>
+
+        <div class="bento-card bento-span-2">
+          <div>
+            <div class="bento-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3 class="bento-title">Lintas Platform & Bebas Ketergantungan CLI</h3>
+            <p class="bento-desc">
+              Ditenagai modul standar Python murni (`zipfile` & `tempfile`). Berjalan lancar di Windows, macOS, maupun Linux tanpa memerlukan software eksternal zip/unzip.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation Section -->
+  <section id="instalasi" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Cara Penggunaan</span>
+        <h2 class="section-title">Instalasi ke Antigravity IDE</h2>
+        <p class="section-desc">Gunakan skill ini dalam hitungan detik di antarmuka coding AI Anda.</p>
+      </div>
+
+      <div class="install-box">
+        <div class="tabs">
+          <button class="tab-btn active" onclick="switchTab('tab-slash', this)">Slash Command IDE</button>
+          <button class="tab-btn" onclick="switchTab('tab-git', this)">Clone via Git</button>
+          <button class="tab-btn" onclick="switchTab('tab-cli', this)">Eksekusi Python CLI</button>
+        </div>
+
+        <div id="tab-slash" class="tab-content">
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px;">Panggil langsung di chat Antigravity IDE:</p>
+          <div class="code-block">
+            <span id="cmdSlash">/uts-unirow @RPS_Mata_Kuliah.docx</span>
+            <button class="copy-btn" onclick="copyText('cmdSlash')">Salin</button>
+          </div>
+        </div>
+
+        <div id="tab-git" class="tab-content" style="display: none;">
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px;">Clone repositori ke folder skills Antigravity:</p>
+          <div class="code-block">
+            <span id="cmdGit">git clone https://github.com/mariofahmi/skilluts.git .agents/skills/uts-unirow</span>
+            <button class="copy-btn" onclick="copyText('cmdGit')">Salin</button>
+          </div>
+        </div>
+
+        <div id="tab-cli" class="tab-content" style="display: none;">
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px;">Jalankan via terminal Python:</p>
+          <div class="code-block">
+            <span id="cmdCli">py scripts/fill_uts.py "Naskah_UTS.docx" --data "data.json"</span>
+            <button class="copy-btn" onclick="copyText('cmdCli')">Salin</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast -->
+  <div id="toast">Teks berhasil disalin!</div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <div style="font-weight: 700; font-size: 1.1rem; color: #fff; margin-bottom: 6px;">Skill Soal UTS UNIROW FKIP</div>
+        <p style="color: var(--text-sub); font-size: 0.9rem; max-width: 480px;">
+          Dikembangkan untuk Program Studi PPKn & Fakultas Keguruan dan Ilmu Pendidikan (FKIP), Universitas PGRI Ronggolawe Tuban.
+        </p>
+      </div>
+
+      <div style="display: flex; gap: 24px;">
+        <a href="https://github.com/mariofahmi/skilluts" target="_blank" rel="noopener" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">GitHub Repository</a>
+        <a href="https://github.com/mariofahmi/skilluts/blob/main/LICENSE" target="_blank" rel="noopener" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">MIT License</a>
+        <a href="https://unirow.ac.id" target="_blank" rel="noopener" style="color: var(--text-muted); text-decoration: none; font-size: 0.9rem;">UNIROW Portal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const sampleQuestions = {
+      pendidikan: [
+        "Jelaskan secara komprehensif konsep dasar, hakikat, dan 4 dimensi kurikulum! Mengapa pemahaman teoretis ini mutlak diperlukan bagi seorang calon pendidik PPKn?",
+        "Kaji dan analisislah 4 landasan utama pengembangan kurikulum (Filosofis, Psikologis, Sosiokultural, dan IPTEK) dalam membentuk kerangka pembelajaran yang bermakna!",
+        "Lakukan telaah kritis terhadap anatomi komponen pokok kurikulum! Bandingkan keterkaitan antara tujuan, materi ajar, strategi pelaksanaan, dan evaluasi!",
+        "Dalam konteks transformasi pendidikan nasional, analisislah dinamika perbedaan pokok antara Kurikulum 2013 dengan Kurikulum Merdeka!",
+        "Rancanglah sebuah gagasan strategi pembelajaran berbasis studi kasus yang inovatif dan aplikatif untuk menginternalisasikan Profil Pelajar Pancasila di tingkat SMA!"
+      ],
+      hukum: [
+        "Jelaskan hakikat, ruang lingkup, dan asas-asas fundamental Hukum Tata Negara dalam konteks sistem ketatanegaraan Republik Indonesia pasca amandemen UUD 1945!",
+        "Analisislah prinsip pemisahan dan pembagian kekuasaan (Trias Politica) serta mekanisme checks and balances antara lembaga eksekutif, legislatif, dan yudikatif!",
+        "Lakukan kajian komparatif terhadap bentuk negara kesatuan dengan desentralisasi vs otonomi daerah di Indonesia! Jelaskan batas kewenangan pemerintah daerah!",
+        "Dalam dinamika hukum kontemporer, kaji problematika pengujian undang-undang (judicial review) di Mahkamah Konstitusi terkait perlindungan hak konstitusional warga negara!",
+        "Susunlah sebuah analisis solutif mengenai peran partisipasi publik bermakna (meaningful participation) dalam proses pembentukan peraturan perundang-undangan!"
+      ]
+    };
+
+    let currentPreset = 'pendidikan';
+
+    function renderQuestions() {
+      const list = sampleQuestions[currentPreset];
+      const container = document.getElementById('questionsContainer');
+      container.innerHTML = list.map((q, idx) => `
+        <div class="exam-question-item">
+          <b>${idx + 1}.</b> ${q}
+        </div>
+      `).join('');
+    }
+
+    function updateExamPreview() {
+      document.getElementById('prevMK').innerText = document.getElementById('inpMK').value;
+      document.getElementById('prevDosen').innerText = document.getElementById('inpDosen').value;
+      document.getElementById('prevSem').innerText = document.getElementById('inpSem').value;
+      document.getElementById('prevWaktu').innerText = document.getElementById('inpWaktu').value;
+      document.getElementById('prevHari').innerText = document.getElementById('inpHari').value;
+      document.getElementById('prevSifat').innerText = document.getElementById('inpSifat').value;
+    }
+
+    function setPreset(type) {
+      currentPreset = type;
+      if (type === 'hukum') {
+        document.getElementById('inpMK').value = 'Hukum Tata Negara';
+        document.getElementById('inpDosen').value = 'Dwi Wahyu Kartikasari, M.Pd.';
+        document.getElementById('inpSem').value = '2024/3';
+        document.getElementById('inpSifat').value = 'Tutup Buku';
+      } else {
+        document.getElementById('inpMK').value = 'Telaah Kurikulum PPKn';
+        document.getElementById('inpDosen').value = 'Dr. Sukisno, M.Pd.';
+        document.getElementById('inpSem').value = '2023/6';
+        document.getElementById('inpSifat').value = 'Tutup Buku';
+      }
+      updateExamPreview();
+      renderQuestions();
+      showToast(`Preset diganti: ${type === 'hukum' ? 'Bidang Hukum' : 'Bidang Pendidikan'}`);
+    }
+
+    function switchTab(tabId, el) {
+      document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).style.display = 'block';
+      el.classList.add('active');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2800);
+    }
+
+    function copyText(elemId) {
+      const text = document.getElementById(elemId).innerText;
+      navigator.clipboard.writeText(text).then(() => showToast('Perintah berhasil disalin!'));
+    }
+
+    function copyInstallCmd() {
+      navigator.clipboard.writeText('/uts-unirow @RPS_Mata_Kuliah.docx').then(() => showToast('Command berhasil disalin!'));
+    }
+
+    // Init
+    updateExamPreview();
+    renderQuestions();
+  </script>
+</body>
+</html>
