@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Portal Resmi Soal UTS UNIROW FKIP — Kurikulum OBE 2026</title>
   <meta name="description" content="AI Agentic Portal resmi Universitas PGRI Ronggolawe Tuban (FKIP) untuk preview, simulasi, dan cetak naskah Soal Ujian Tengah Semester (UTS) berbasis kurikulum OBE 2026.">
   <meta name="keywords" content="Soal UTS, UNIROW Tuban, FKIP, Kurikulum OBE, Portal Ujian, Cetak Soal UTS, Taksonomi Bloom">
@@ -439,6 +439,168 @@
       font-size: 0.8rem;
       color: var(--text-muted);
     }
+
+    
+/* ==========================================================================
+   ENHANCED MOBILE & TABLET RESPONSIVE SYSTEM - SOAL UTS & UAS
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 18px !important;
+  }
+  .sim-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .bento-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .bento-span-2 {
+    grid-column: span 1 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-inner {
+    height: 62px !important;
+  }
+  .nav-links {
+    display: none !important;
+  }
+  .brand-tag {
+    display: none !important;
+  }
+  .hero {
+    padding: 36px 0 20px !important;
+  }
+  .hero-title {
+    font-size: 2rem !important;
+    line-height: 1.22 !important;
+  }
+  .hero-desc {
+    font-size: 0.94rem !important;
+  }
+  .hero-cta {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+  .hero-cta .btn {
+    width: 100% !important;
+    min-height: 44px !important;
+    justify-content: center !important;
+  }
+  .hero-stats {
+    gap: 20px !important;
+    padding-top: 20px !important;
+  }
+  .stat-num {
+    font-size: 1.7rem !important;
+  }
+
+  /* Simulator Card */
+  .simulator-card {
+    padding: 16px 12px !important;
+  }
+  .controls-panel {
+    padding: 16px 12px !important;
+    max-height: none !important;
+  }
+  .form-input, .form-select {
+    font-size: 16px !important;
+  }
+
+  /* Paper Wrapper & Authentic Exam Paper */
+  .paper-wrapper {
+    padding: 12px 6px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-radius: var(--radius-sm) !important;
+  }
+  .exam-paper {
+    padding: 20px 14px !important;
+    font-size: 0.88rem !important;
+    line-height: 1.42 !important;
+    min-width: 0 !important;
+  }
+  .exam-kop {
+    gap: 10px !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 10px !important;
+  }
+  .kop-logo {
+    width: 50px !important;
+    height: 52px !important;
+  }
+  .kop-title {
+    font-size: 0.95rem !important;
+  }
+  .kop-sub {
+    font-size: 0.82rem !important;
+  }
+  .kop-uni {
+    font-size: 0.95rem !important;
+  }
+  .kop-addr {
+    font-size: 0.68rem !important;
+  }
+
+  .exam-meta-table {
+    font-size: 0.78rem !important;
+    margin-bottom: 10px !important;
+  }
+  .exam-meta-table td {
+    padding: 3px 5px !important;
+  }
+
+  .exam-q-item {
+    padding-left: 20px !important;
+    text-indent: -20px !important;
+    font-size: 0.85rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Action Buttons */
+  .sim-actions {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  .sim-actions .btn {
+    width: 100% !important;
+    min-height: 44px !important;
+    justify-content: center !important;
+  }
+
+  /* Catalog Grid */
+  .catalog-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* Footer */
+  footer {
+    padding: 36px 0 calc(24px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+  .footer-inner {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px !important;
+  }
+  .brand-logo {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .hero-title {
+    font-size: 1.65rem !important;
+  }
+}
+
 
     @media print {
       /* 1. Hilangkan total seluruh elemen website, ambient glow, dan background effects */
